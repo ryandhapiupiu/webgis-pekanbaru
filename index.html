@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebGIS Fasilitas Umum Pekanbaru</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary: #2563eb;
+            --surface: rgba(255, 255, 255, 0.85);
+            --surface-blur: blur(12px);
+            --text-main: #1e293b;
+            --text-light: #64748b;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc;
+            color: var(--text-main);
+            overflow: hidden;
+        }
+
+        #map {
+            width: 100vw;
+            height: 100vh;
+            z-index: 1;
+        }
+
+        /* Modern Floating Title */
+        .map-title {
+            position: absolute;
+            top: 24px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1000;
+            background: var(--surface);
+            backdrop-filter: var(--surface-blur);
+            -webkit-backdrop-filter: var(--surface-blur);
+            padding: 14px 28px;
+            border-radius: 100px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.6);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            transition: all 0.3s ease;
+        }
+        
+        .map-title:hover {
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+            transform: translateX(-50%) translateY(-2px);
+        }
+
+        .map-title h1 {
+            margin: 0;
+            font-size: 1.25rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #2563eb, #0ea5e9);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: -0.5px;
+        }
+
+        .map-title i {
+            color: var(--primary);
+            font-size: 1.4rem;
+            background: linear-gradient(135deg, #2563eb, #0ea5e9);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Custom Marker Styles */
+        .custom-marker {
+            background: none;
+            border: none;
+        }
+        
+        .marker-icon-container {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            box-shadow: 0 6px 16px rgba(0,0,0,0.25);
+            border: 2px solid white;
+            transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+            font-size: 16px;
+        }
+        
+        .marker-icon-container:hover {
+            transform: scale(1.15) translateY(-4px);
+            z-index: 1000 !important;
+        }
+
+        .marker-hospital { background: linear-gradient(135deg, #ef4444, #dc2626); }
+        .marker-school { background: linear-gradient(135deg, #eab308, #ca8a04); }
+        .marker-fire { background: linear-gradient(135deg, #f97316, #ea580c); }
+
+        /* Modern Popup */
+        .leaflet-popup-content-wrapper {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(12px);
+            border-radius: 16px;
+            box-shadow: 0 12px 32px rgba(0,0,0,0.15);
+            padding: 0;
+            overflow: hidden;
+            border: 1px solid rgba(255,255,255,0.8);
+        }
+
+        .leaflet-popup-tip-container {
+            display: none; /* Sembunyikan panah default Leaflet karena desain bubble melayang */
+        }
+
+        .leaflet-popup-content {
+            margin: 0;
+            line-height: 1.5;
+            min-width: 240px;
+        }
+
+        .popup-header {
+            padding: 16px 20px;
+            color: white;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.05rem;
+        }
+        
+        .popup-header.hospital { background: linear-gradient(135deg, #ef4444, #dc2626); }
+        .popup-header.school { background: linear-gradient(135deg, #eab308, #ca8a04); }
+        .popup-header.fire { background: linear-gradient(135deg, #f97316, #ea580c); }
+
+        .popup-body {
+            padding: 20px;
+        }
+
+        .popup-row {
+            display: flex;
+            margin-bottom: 12px;
+            font-size: 0.9rem;
+            border-bottom: 1px solid #f1f5f9;
+            padding-bottom: 8px;
+        }
+
+        .popup-row:last-child {
+            margin-bottom: 0;
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+
+        .popup-label {
+            font-weight: 600;
+            color: var(--text-light);
+            width: 90px;
+            flex-shrink: 0;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            display: flex;
+            align-items: center;
+        }
+
+        .popup-value {
+            color: var(--text-main);
+            font-weight: 500;
+        }
+
+        /* Modern Legend */
+        .map-legend {
+            background: var(--surface);
+            backdrop-filter: var(--surface-blur);
+            -webkit-backdrop-filter: var(--surface-blur);
+            padding: 20px;
+            border-radius: 20px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.6);
+            color: var(--text-main);
+            margin-bottom: 24px !important;
+            margin-left: 24px !important;
+        }
+
+        .legend-title {
+            font-weight: 700;
+            margin-bottom: 16px;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--text-light);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 12px;
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: transform 0.2s;
+            cursor: default;
+        }
+        
+        .legend-item:hover {
+            transform: translateX(4px);
+        }
+
+        .legend-item:last-child { margin-bottom: 0; }
+
+        .legend-color {
+            width: 28px;
+            height: 28px;
+            border-radius: 8px;
+            margin-right: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 12px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+        }
+
+        .legend-panel {
+            position: absolute;
+            bottom: 24px;
+            left: 24px;
+            z-index: 1000;
+            width: 300px;
+            max-width: calc(100vw - 48px);
+            background: var(--surface);
+            backdrop-filter: var(--surface-blur);
+            -webkit-backdrop-filter: var(--surface-blur);
+            border: 1px solid rgba(255,255,255,0.7);
+            border-radius: 20px;
+            box-shadow: 0 12px 32px rgba(0,0,0,0.12);
+            padding: 20px;
+            color: var(--text-main);
+            font-size: 0.95rem;
+        }
+
+        .legend-panel h2 {
+            margin: 0 0 12px;
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--text-main);
+            letter-spacing: 0.5px;
+        }
+
+        .legend-panel p {
+            margin: 0 0 14px;
+            color: var(--text-light);
+            line-height: 1.45;
+            font-size: 0.9rem;
+        }
+
+        .legend-panel label {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 12px;
+            cursor: pointer;
+            color: var(--text-main);
+            font-weight: 500;
+        }
+
+        .legend-panel input[type="checkbox"] {
+            width: 18px;
+            height: 18px;
+            accent-color: var(--primary);
+        }
+
+        .legend-panel select {
+            width: 100%;
+            border: 1px solid rgba(148,163,184,0.35);
+            border-radius: 12px;
+            padding: 10px 12px;
+            background: white;
+            color: var(--text-main);
+            font-family: 'Inter', sans-serif;
+            font-weight: 500;
+            margin-bottom: 16px;
+        }
+
+        .legend-item-list {
+            display: grid;
+            gap: 12px;
+        }
+
+        .legend-item-list .legend-item {
+            padding: 10px 12px;
+            border-radius: 16px;
+            border: 1px solid rgba(148,163,184,0.18);
+            background: rgba(255,255,255,0.92);
+            gap: 12px;
+            justify-content: flex-start;
+        }
+
+        .legend-item-list .legend-color {
+            width: 28px;
+            height: 28px;
+            border-radius: 10px;
+            margin-right: 0;
+        }
+
+        /* Adjust Leaflet Controls */
+        .leaflet-control-layers {
+            border: 1px solid rgba(255, 255, 255, 0.6) !important;
+            border-radius: 16px !important;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1) !important;
+            background: var(--surface) !important;
+            backdrop-filter: var(--surface-blur) !important;
+            padding: 12px !important;
+            font-family: 'Inter', sans-serif;
+            margin-top: 24px !important;
+            margin-right: 24px !important;
+        }
+
+        .leaflet-control-layers-list {
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: var(--text-main);
+        }
+
+        .leaflet-control-layers label {
+            margin-bottom: 8px;
+        }
+        
+        .leaflet-control-zoom {
+            border: 1px solid rgba(255, 255, 255, 0.6) !important;
+            border-radius: 12px !important;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1) !important;
+            margin-right: 24px !important;
+            margin-bottom: 24px !important;
+            overflow: hidden;
+        }
+
+        .leaflet-control-zoom a {
+            border: none !important;
+            background: var(--surface) !important;
+            backdrop-filter: var(--surface-blur) !important;
+            color: var(--text-main) !important;
+            width: 36px !important;
+            height: 36px !important;
+            line-height: 36px !important;
+            font-size: 16px !important;
+            font-weight: 600 !important;
+            transition: background 0.2s;
+        }
+
+        .leaflet-control-zoom a:hover {
+            background: rgba(255, 255, 255, 1) !important;
+            color: var(--primary) !important;
+        }
+
+        .leaflet-control-zoom a:first-child { border-bottom: 1px solid rgba(0,0,0,0.05) !important; }
+
+    </style>
+</head>
+<body>
+
+    <div class="map-title">
+        <i class="fa-solid fa-map-location-dot"></i>
+        <h1>WebGIS Fasilitas Umum Pekanbaru</h1>
+    </div>
+
+    <div id="map"></div>
+
+    <div class="legend-panel" id="legendPanel">
+        <h2>Legenda & Filter</h2>
+        <p>Pilih jenis fasilitas yang ingin ditampilkan, lalu urutkan tampilan legenda.</p>
+
+        <label><input type="checkbox" id="check-hospital" checked> Rumah Sakit</label>
+        <label><input type="checkbox" id="check-school" checked> Sekolah</label>
+        <label><input type="checkbox" id="check-fire" checked> Pemadam Kebakaran</label>
+
+        <select id="sortSelect" aria-label="Urutkan legenda">
+            <option value="default">Urutan Default</option>
+            <option value="name-asc">A-Z</option>
+            <option value="name-desc">Z-A</option>
+        </select>
+
+        <div class="legend-item-list" id="legendItemList"></div>
+    </div>
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    
+    <script>
+        // Inisialisasi Peta (Center di Pekanbaru)
+        const map = L.map('map', {
+            zoomControl: false // Kita pindahkan zoom control ke kanan bawah
+        }).setView([0.5333, 101.4500], 13);
+
+        // Pindahkan zoom control ke kanan bawah
+        L.control.zoom({ position: 'bottomright' }).addTo(map);
+
+        // Tambahkan Basemap OpenStreetMap
+        const osm = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19,
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        // Icon Custom Generator
+        const createCustomIcon = (type, iconClass) => {
+            return L.divIcon({
+                className: 'custom-marker',
+                html: `<div class="marker-icon-container marker-${type}"><i class="${iconClass}"></i></div>`,
+                iconSize: [36, 36],
+                iconAnchor: [18, 18], // Center of the marker
+                popupAnchor: [0, -20] // Popup appears above the marker
+            });
+        };
+
+        const icons = {
+            hospital: createCustomIcon('hospital', 'fa-solid fa-hospital'),
+            school: createCustomIcon('school', 'fa-solid fa-graduation-cap'),
+            fire: createCustomIcon('fire', 'fa-solid fa-fire-extinguisher')
+        };
+
+        // Fungsi untuk membuat popup modern
+        const createPopupContent = (feature, type, title, typeClass) => {
+            let props = feature.properties;
+            let rows = '';
+            
+            for (let key in props) {
+                if(key !== 'name' && key !== 'type') {
+                    // Format key: uppercase first letter, replace underscore with space
+                    let formattedKey = key.replace(/_/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
+                    rows += `
+                        <div class="popup-row">
+                            <div class="popup-label">${formattedKey}</div>
+                            <div class="popup-value">${props[key]}</div>
+                        </div>
+                    `;
+                }
+            }
+
+            return `
+                <div class="popup-header ${typeClass}">
+                    <i class="${type === 'hospital' ? 'fa-solid fa-hospital' : (type === 'school' ? 'fa-solid fa-graduation-cap' : 'fa-solid fa-fire-extinguisher')}"></i>
+                    <span>${props.name || title}</span>
+                </div>
+                <div class="popup-body">
+                    ${rows}
+                </div>
+            `;
+        };
+
+        // Layer Groups
+        const hospitalLayer = L.layerGroup().addTo(map);
+        const schoolLayer = L.layerGroup().addTo(map);
+        const fireLayer = L.layerGroup().addTo(map);
+
+        // Fungsi untuk me-load GeoJSON
+        const loadGeoJSON = async (url, layerGroup, icon, type, title, typeClass) => {
+            try {
+                const response = await fetch(url);
+                if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+                const data = await response.json();
+                
+                L.geoJSON(data, {
+                    pointToLayer: (feature, latlng) => {
+                        return L.marker(latlng, { icon: icon });
+                    },
+                    onEachFeature: (feature, layer) => {
+                        if (feature.properties) {
+                            layer.bindPopup(createPopupContent(feature, type, title, typeClass), {
+                                offset: [0, -10],
+                                autoPanPadding: [50, 50]
+                            });
+                        }
+                    }
+                }).addTo(layerGroup);
+            } catch (error) {
+                console.warn(`Gagal memuat ${url}. Pastikan Anda menjalankan ini lewat local server (Live Server, dll) agar fetch() bisa bekerja:`, error);
+            }
+        };
+
+        // Load Data dari folder 'data'
+        loadGeoJSON('data/hospital.geojson', hospitalLayer, icons.hospital, 'hospital', 'Rumah Sakit', 'hospital');
+        loadGeoJSON('data/school.geojson', schoolLayer, icons.school, 'school', 'Sekolah', 'school');
+        loadGeoJSON('data/fire_station.geojson', fireLayer, icons.fire, 'fire', 'Pemadam Kebakaran', 'fire');
+
+        const legendItems = [
+            {
+                key: 'hospital',
+                label: 'Rumah Sakit',
+                icon: 'fa-solid fa-hospital',
+                className: 'marker-hospital',
+                layer: hospitalLayer,
+                checked: true
+            },
+            {
+                key: 'school',
+                label: 'Sekolah',
+                icon: 'fa-solid fa-graduation-cap',
+                className: 'marker-school',
+                layer: schoolLayer,
+                checked: true
+            },
+            {
+                key: 'fire',
+                label: 'Pemadam Kebakaran',
+                icon: 'fa-solid fa-fire-extinguisher',
+                className: 'marker-fire',
+                layer: fireLayer,
+                checked: true
+            }
+        ];
+
+        const legendItemList = document.getElementById('legendItemList');
+        const sortSelect = document.getElementById('sortSelect');
+
+        const renderLegendItems = (items) => {
+            legendItemList.innerHTML = items.map(item => `
+                <div class="legend-item">
+                    <div class="legend-color ${item.className}"><i class="${item.icon}"></i></div>
+                    <span>${item.label}</span>
+                </div>
+            `).join('');
+        };
+
+        const updateLegend = () => {
+            let activeItems = legendItems.map(item => {
+                const checkbox = document.getElementById(`check-${item.key}`);
+                item.checked = checkbox.checked;
+                return item;
+            });
+
+            activeItems.forEach(item => {
+                if (item.checked) {
+                    if (!map.hasLayer(item.layer)) map.addLayer(item.layer);
+                } else {
+                    if (map.hasLayer(item.layer)) map.removeLayer(item.layer);
+                }
+            });
+
+            const sortValue = sortSelect.value;
+            if (sortValue === 'name-asc') {
+                activeItems.sort((a, b) => a.label.localeCompare(b.label, 'id'));
+            } else if (sortValue === 'name-desc') {
+                activeItems.sort((a, b) => b.label.localeCompare(a.label, 'id'));
+            }
+
+            renderLegendItems(activeItems.filter(item => item.checked));
+        };
+
+        document.getElementById('check-hospital').addEventListener('change', updateLegend);
+        document.getElementById('check-school').addEventListener('change', updateLegend);
+        document.getElementById('check-fire').addEventListener('change', updateLegend);
+        sortSelect.addEventListener('change', updateLegend);
+
+        updateLegend();
+
+    </script>
+</body>
+</html>

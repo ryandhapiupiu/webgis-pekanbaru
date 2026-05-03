@@ -1,0 +1,46 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "SMA Negeri 1 Pekanbaru",
+        "alamat": "Jl. Sultan Syarif Qasim No.159",
+        "akreditasi": "A",
+        "jumlah_siswa": "1200",
+        "status": "Negeri"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [101.4497, 0.5361]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "SMP Negeri 1 Pekanbaru",
+        "alamat": "Jl. Sultan Syarif Qasim No.157",
+        "akreditasi": "A",
+        "jumlah_siswa": "850",
+        "status": "Negeri"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [101.4510, 0.5375]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Universitas Riau (UNRI) - Kampus Gobah",
+        "alamat": "Jl. Pattimura No.9",
+        "fakultas": "Hukum & Pascasarjana",
+        "status": "Perguruan Tinggi Negeri"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [101.4560, 0.5180]
+      }
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "RSUD Arifin Achmad",
+        "alamat": "Jl. Diponegoro No.2, Pekanbaru",
+        "telepon": "(0761) 21618",
+        "kapasitas": "500 Bed",
+        "tipe": "Kelas B"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [101.4485, 0.5262]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "RS Awal Bros Pekanbaru",
+        "alamat": "Jl. Jend. Sudirman No.117",
+        "telepon": "(0761) 47333",
+        "kapasitas": "300 Bed",
+        "layanan_unggulan": "Jantung & Saraf"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [101.4552, 0.5054]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "RS Santa Maria",
+        "alamat": "Jl. Jend. Ahmad Yani No.68",
+        "telepon": "(0761) 22213",
+        "layanan_unggulan": "Ibu & Anak"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [101.4445, 0.5310]
+      }
+    }
+  ]
+}
