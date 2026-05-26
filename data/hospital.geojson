@@ -1,46 +1,1418 @@
-{
-  "type": "FeatureCollection",
-  "features": [
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "RSUD Arifin Achmad",
-        "alamat": "Jl. Diponegoro No.2, Pekanbaru",
-        "telepon": "(0761) 21618",
-        "kapasitas": "500 Bed",
-        "tipe": "Kelas B"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [101.4485, 0.5262]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "RS Awal Bros Pekanbaru",
-        "alamat": "Jl. Jend. Sudirman No.117",
-        "telepon": "(0761) 47333",
-        "kapasitas": "300 Bed",
-        "layanan_unggulan": "Jantung & Saraf"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [101.4552, 0.5054]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "RS Santa Maria",
-        "alamat": "Jl. Jend. Ahmad Yani No.68",
-        "telepon": "(0761) 22213",
-        "layanan_unggulan": "Ibu & Anak"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [101.4445, 0.5310]
-      }
-    }
-  ]
+﻿{
+    "type":  "FeatureCollection",
+    "name":  "rumah_sakit_pekanbaru",
+    "features":  [
+                     {
+                         "type":  "Feature",
+                         "properties":  {
+                                            "osm_id":  2050772731,
+                                            "osm_type":  "node",
+                                            "amenity":  "hospital",
+                                            "addr:street":  "Jalan Ronggo Warsito",
+                                            "emergency":  "yes",
+                                            "healthcare":  "hospital",
+                                            "name":  "Rumah Sakit Lancang Kuning",
+                                            "type":  "Rumah Sakit"
+                                        },
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              101.4647238,
+                                                              0.5128471
+                                                          ]
+                                      }
+                     },
+                     {
+                         "type":  "Feature",
+                         "properties":  {
+                                            "osm_id":  3201062626,
+                                            "osm_type":  "node",
+                                            "amenity":  "hospital",
+                                            "addr:street":  "Jl. Bukit Barisan",
+                                            "name":  "Klinik Anwar Salim",
+                                            "type":  "Rumah Sakit"
+                                        },
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              101.4891722,
+                                                              0.4892311
+                                                          ]
+                                      }
+                     },
+                     {
+                         "type":  "Feature",
+                         "properties":  {
+                                            "osm_id":  3235827761,
+                                            "osm_type":  "node",
+                                            "amenity":  "hospital",
+                                            "addr:city":  "Pekanbaru",
+                                            "addr:housenumber":  "65",
+                                            "addr:postcode":  "28155",
+                                            "addr:street":  "Jl. Dr. Sutomo",
+                                            "emergency":  "yes",
+                                            "healthcare":  "hospital",
+                                            "name":  "RS Petala Bumi",
+                                            "type":  "Rumah Sakit"
+                                        },
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              101.4608421,
+                                                              0.5328942
+                                                          ]
+                                      }
+                     },
+                     {
+                         "type":  "Feature",
+                         "properties":  {
+                                            "osm_id":  3235899050,
+                                            "osm_type":  "node",
+                                            "amenity":  "hospital",
+                                            "addr:city":  "Pekanbaru",
+                                            "addr:street":  "Jalan Garuda",
+                                            "check_date":  "2026-05-10",
+                                            "emergency":  "yes",
+                                            "healthcare":  "hospital",
+                                            "name":  "RSIA Annisa",
+                                            "type":  "Rumah Sakit"
+                                        },
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              101.4449604,
+                                                              0.4993439
+                                                          ]
+                                      }
+                     },
+                     {
+                         "type":  "Feature",
+                         "properties":  {
+                                            "osm_id":  3235935300,
+                                            "osm_type":  "node",
+                                            "amenity":  "hospital",
+                                            "designation":  "Kesehatan",
+                                            "emergency":  "no",
+                                            "healthcare":  "hospital",
+                                            "name":  "klinik Indo Sehat",
+                                            "source":  "Survey",
+                                            "type":  "Rumah Sakit"
+                                        },
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              101.4470324,
+                                                              0.4382709
+                                                          ]
+                                      }
+                     },
+                     {
+                         "type":  "Feature",
+                         "properties":  {
+                                            "osm_id":  3235938840,
+                                            "osm_type":  "node",
+                                            "amenity":  "hospital",
+                                            "designation":  "Rumah Sakit Swasta",
+                                            "emergency":  "yes",
+                                            "healthcare":  "hospital",
+                                            "name":  "Rumah Sakit SANSANI",
+                                            "source":  "survey",
+                                            "type":  "Rumah Sakit"
+                                        },
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              101.4188995,
+                                                              0.456073
+                                                          ]
+                                      }
+                     },
+                     {
+                         "type":  "Feature",
+                         "properties":  {
+                                            "osm_id":  3235998380,
+                                            "osm_type":  "node",
+                                            "amenity":  "hospital",
+                                            "designation":  "Kesehatan",
+                                            "emergency":  "no",
+                                            "healthcare":  "hospital",
+                                            "name":  "Klinik Felita",
+                                            "source":  "survey",
+                                            "type":  "Rumah Sakit"
+                                        },
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              101.446158,
+                                                              0.4363076
+                                                          ]
+                                      }
+                     },
+                     {
+                         "type":  "Feature",
+                         "properties":  {
+                                            "osm_id":  3743705725,
+                                            "osm_type":  "node",
+                                            "amenity":  "hospital",
+                                            "emergency":  "no",
+                                            "healthcare":  "clinic",
+                                            "name":  "Klinik Al-Misbah",
+                                            "type":  "Rumah Sakit"
+                                        },
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              101.4491508,
+                                                              0.5645993
+                                                          ]
+                                      }
+                     },
+                     {
+                         "type":  "Feature",
+                         "properties":  {
+                                            "osm_id":  3743706930,
+                                            "osm_type":  "node",
+                                            "amenity":  "hospital",
+                                            "addr:city":  "Rumbai",
+                                            "addr:street":  "Jl Sekolah / Kayangan",
+                                            "emergency":  "no",
+                                            "healthcare":  "hospital",
+                                            "name":  "Rumah Sakit Andini Rumbai",
+                                            "type":  "Rumah Sakit"
+                                        },
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              101.437754,
+                                                              0.5602182
+                                                          ]
+                                      }
+                     },
+                     {
+                         "type":  "Feature",
+                         "properties":  {
+                                            "osm_id":  3979540537,
+                                            "osm_type":  "node",
+                                            "amenity":  "hospital",
+                                            "addr:city":  "Pekanbaru",
+                                            "addr:street":  "Jl. Dr. Sutomo",
+                                            "healthcare":  "hospital",
+                                            "name":  "Rumah Sakit Petala Bumi",
+                                            "type":  "Rumah Sakit"
+                                        },
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              101.4567904,
+                                                              0.5290291
+                                                          ]
+                                      }
+                     },
+                     {
+                         "type":  "Feature",
+                         "properties":  {
+                                            "osm_id":  4177950691,
+                                            "osm_type":  "node",
+                                            "amenity":  "hospital",
+                                            "healthcare":  "hospital",
+                                            "name":  "RSIA Zainab",
+                                            "type":  "Rumah Sakit"
+                                        },
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              101.4547469,
+                                                              0.5137949
+                                                          ]
+                                      }
+                     },
+                     {
+                         "type":  "Feature",
+                         "properties":  {
+                                            "osm_id":  4213648073,
+                                            "osm_type":  "node",
+                                            "amenity":  "hospital",
+                                            "addr:city":  "Panam",
+                                            "addr:street":  "Garuda Sakti Km.2",
+                                            "name":  "Bastian Hospital",
+                                            "type":  "Rumah Sakit"
+                                        },
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              101.3660485,
+                                                              0.4790587
+                                                          ]
+                                      }
+                     },
+                     {
+                         "type":  "Feature",
+                         "properties":  {
+                                            "osm_id":  4214797874,
+                                            "osm_type":  "node",
+                                            "amenity":  "hospital",
+                                            "healthcare":  "hospital",
+                                            "name":  "Politeknik Kesehatan Riau",
+                                            "type":  "Rumah Sakit"
+                                        },
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              101.4348941,
+                                                              0.5259436
+                                                          ]
+                                      }
+                     },
+                     {
+                         "type":  "Feature",
+                         "properties":  {
+                                            "osm_id":  4542195377,
+                                            "osm_type":  "node",
+                                            "amenity":  "hospital",
+                                            "addr:city":  "Pekanbaru",
+                                            "addr:postcode":  "28293",
+                                            "addr:street":  "Garuda Sakti Km2 Simpang Baru",
+                                            "name":  "Apotik Keluarga 3",
+                                            "operator":  "desi",
+                                            "type":  "Rumah Sakit"
+                                        },
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              101.3683048,
+                                                              0.4737608
+                                                          ]
+                                      }
+                     },
+                     {
+                         "type":  "Feature",
+                         "properties":  {
+                                            "osm_id":  4557440658,
+                                            "osm_type":  "node",
+                                            "amenity":  "hospital",
+                                            "healthcare":  "hospital",
+                                            "name":  "Apotik Generik",
+                                            "type":  "Rumah Sakit"
+                                        },
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              101.3948774,
+                                                              0.4592816
+                                                          ]
+                                      }
+                     },
+                     {
+                         "type":  "Feature",
+                         "properties":  {
+                                            "osm_id":  4557475491,
+                                            "osm_type":  "node",
+                                            "amenity":  "hospital",
+                                            "healthcare":  "hospital",
+                                            "name":  "Apotek Cahaya Mulya",
+                                            "type":  "Rumah Sakit"
+                                        },
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              101.3919799,
+                                                              0.4524827
+                                                          ]
+                                      }
+                     },
+                     {
+                         "type":  "Feature",
+                         "properties":  {
+                                            "osm_id":  4561069146,
+                                            "osm_type":  "node",
+                                            "amenity":  "hospital",
+                                            "addr:city":  "Kota Pekanbaru",
+                                            "addr:street":  "Jl. HR Soebrantas",
+                                            "healthcare":  "hospital",
+                                            "name":  "Bidan Dahlia",
+                                            "type":  "Rumah Sakit"
+                                        },
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              101.3781344,
+                                                              0.4647537
+                                                          ]
+                                      }
+                     },
+                     {
+                         "type":  "Feature",
+                         "properties":  {
+                                            "osm_id":  4561188853,
+                                            "osm_type":  "node",
+                                            "amenity":  "hospital",
+                                            "healthcare":  "midwife",
+                                            "name":  "dr. Triadi",
+                                            "type":  "Rumah Sakit"
+                                        },
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              101.4357643,
+                                                              0.5073783
+                                                          ]
+                                      }
+                     },
+                     {
+                         "type":  "Feature",
+                         "properties":  {
+                                            "osm_id":  4561207180,
+                                            "osm_type":  "node",
+                                            "amenity":  "hospital",
+                                            "healthcare":  "hospital",
+                                            "name":  "apotek",
+                                            "type":  "Rumah Sakit"
+                                        },
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              101.3670888,
+                                                              0.4672281
+                                                          ]
+                                      }
+                     },
+                     {
+                         "type":  "Feature",
+                         "properties":  {
+                                            "osm_id":  4781211321,
+                                            "osm_type":  "node",
+                                            "amenity":  "hospital",
+                                            "name":  "Puskesmas Simpang Tiga",
+                                            "type":  "Rumah Sakit"
+                                        },
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              101.4529238,
+                                                              0.4635978
+                                                          ]
+                                      }
+                     },
+                     {
+                         "type":  "Feature",
+                         "properties":  {
+                                            "osm_id":  4782519374,
+                                            "osm_type":  "node",
+                                            "amenity":  "hospital",
+                                            "healthcare":  "hospital",
+                                            "name":  "RS. Ritonga",
+                                            "type":  "Rumah Sakit"
+                                        },
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              101.4194779,
+                                                              0.445441
+                                                          ]
+                                      }
+                     },
+                     {
+                         "type":  "Feature",
+                         "properties":  {
+                                            "osm_id":  4782597724,
+                                            "osm_type":  "node",
+                                            "amenity":  "hospital",
+                                            "healthcare":  "hospital",
+                                            "name":  "RM Bukti",
+                                            "type":  "Rumah Sakit"
+                                        },
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              101.4103848,
+                                                              0.446206
+                                                          ]
+                                      }
+                     },
+                     {
+                         "type":  "Feature",
+                         "properties":  {
+                                            "osm_id":  4784097903,
+                                            "osm_type":  "node",
+                                            "amenity":  "hospital",
+                                            "healthcare":  "hospital",
+                                            "name":  "RUMAH SAKIT HARAPAN",
+                                            "type":  "Rumah Sakit"
+                                        },
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              101.3697888,
+                                                              0.4699671
+                                                          ]
+                                      }
+                     },
+                     {
+                         "type":  "Feature",
+                         "properties":  {
+                                            "osm_id":  4784531482,
+                                            "osm_type":  "node",
+                                            "amenity":  "hospital",
+                                            "addr:city":  "Pekanbaru",
+                                            "addr:postcode":  "28156",
+                                            "addr:street":  "Jalan Durian",
+                                            "name":  "Rumah Sakit Ibu dan Anak Labuh Baru",
+                                            "type":  "Rumah Sakit"
+                                        },
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              101.4265723,
+                                                              0.5169519
+                                                          ]
+                                      }
+                     },
+                     {
+                         "type":  "Feature",
+                         "properties":  {
+                                            "osm_id":  5182962604,
+                                            "osm_type":  "node",
+                                            "amenity":  "hospital",
+                                            "healthcare":  "hospital",
+                                            "name":  "RSIA Eria Bunda",
+                                            "type":  "Rumah Sakit"
+                                        },
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              101.4380253,
+                                                              0.5121491
+                                                          ]
+                                      }
+                     },
+                     {
+                         "type":  "Feature",
+                         "properties":  {
+                                            "osm_id":  5282558825,
+                                            "osm_type":  "node",
+                                            "amenity":  "hospital",
+                                            "description":  "gedung rumah Sakit Mata PBEC",
+                                            "healthcare":  "hospital",
+                                            "name":  "Rumah Sakit Mata PBEC",
+                                            "type":  "Rumah Sakit"
+                                        },
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              101.4190841,
+                                                              0.4760084
+                                                          ]
+                                      }
+                     },
+                     {
+                         "type":  "Feature",
+                         "properties":  {
+                                            "osm_id":  5791311087,
+                                            "osm_type":  "node",
+                                            "amenity":  "hospital",
+                                            "healthcare":  "hospital",
+                                            "name":  "Kliknk hewan",
+                                            "type":  "Rumah Sakit"
+                                        },
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              101.4342951,
+                                                              0.5317879
+                                                          ]
+                                      }
+                     },
+                     {
+                         "type":  "Feature",
+                         "properties":  {
+                                            "osm_id":  6039459186,
+                                            "osm_type":  "node",
+                                            "amenity":  "hospital",
+                                            "addr:city":  "Pekanbaru",
+                                            "addr:street":  "Jl. Dr H Sutiono",
+                                            "healthcare":  "hospital",
+                                            "name":  "RS Budhi Mulya",
+                                            "type":  "Rumah Sakit"
+                                        },
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              101.4190768,
+                                                              0.4764682
+                                                          ]
+                                      }
+                     },
+                     {
+                         "type":  "Feature",
+                         "properties":  {
+                                            "osm_id":  6039534113,
+                                            "osm_type":  "node",
+                                            "amenity":  "hospital",
+                                            "healthcare":  "hospital",
+                                            "name":  "Apotek Nasional",
+                                            "type":  "Rumah Sakit"
+                                        },
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              101.4420179,
+                                                              0.5245238
+                                                          ]
+                                      }
+                     },
+                     {
+                         "type":  "Feature",
+                         "properties":  {
+                                            "osm_id":  6039536985,
+                                            "osm_type":  "node",
+                                            "amenity":  "hospital",
+                                            "healthcare":  "hospital",
+                                            "name":  "Apotek Kimia Farma",
+                                            "type":  "Rumah Sakit"
+                                        },
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              101.4420216,
+                                                              0.524672
+                                                          ]
+                                      }
+                     },
+                     {
+                         "type":  "Feature",
+                         "properties":  {
+                                            "osm_id":  6039536986,
+                                            "osm_type":  "node",
+                                            "amenity":  "hospital",
+                                            "healthcare":  "hospital",
+                                            "name":  "Apotek Sehati Farma",
+                                            "type":  "Rumah Sakit"
+                                        },
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              101.442034,
+                                                              0.5248465
+                                                          ]
+                                      }
+                     },
+                     {
+                         "type":  "Feature",
+                         "properties":  {
+                                            "osm_id":  6039540391,
+                                            "osm_type":  "node",
+                                            "amenity":  "hospital",
+                                            "healthcare":  "hospital",
+                                            "name":  "Apotek Duta 3",
+                                            "type":  "Rumah Sakit"
+                                        },
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              101.4387669,
+                                                              0.5204811
+                                                          ]
+                                      }
+                     },
+                     {
+                         "type":  "Feature",
+                         "properties":  {
+                                            "osm_id":  6503222507,
+                                            "osm_type":  "node",
+                                            "amenity":  "hospital",
+                                            "addr:city":  "Pekanbaru",
+                                            "addr:postcode":  "28285",
+                                            "addr:street":  "Jl. Singgalang V",
+                                            "healthcare":  "hospital",
+                                            "name":  "Klinik Ikhwan Pekanbaru",
+                                            "type":  "Rumah Sakit"
+                                        },
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              101.5064256,
+                                                              0.4848479
+                                                          ]
+                                      }
+                     },
+                     {
+                         "type":  "Feature",
+                         "properties":  {
+                                            "osm_id":  6504106402,
+                                            "osm_type":  "node",
+                                            "amenity":  "hospital",
+                                            "addr:city":  "Pekanbaru",
+                                            "addr:province":  "Riau",
+                                            "healthcare":  "hospital",
+                                            "name":  "Puskesmas Harapan Raya",
+                                            "type":  "Rumah Sakit"
+                                        },
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              101.45516,
+                                                              0.4994248
+                                                          ]
+                                      }
+                     },
+                     {
+                         "type":  "Feature",
+                         "properties":  {
+                                            "osm_id":  6504115812,
+                                            "osm_type":  "node",
+                                            "amenity":  "hospital",
+                                            "healthcare":  "hospital",
+                                            "name":  "klinikginjal",
+                                            "wheelchair":  "yes",
+                                            "type":  "Rumah Sakit"
+                                        },
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              101.4549442,
+                                                              0.4899132
+                                                          ]
+                                      }
+                     },
+                     {
+                         "type":  "Feature",
+                         "properties":  {
+                                            "osm_id":  6504147641,
+                                            "osm_type":  "node",
+                                            "amenity":  "hospital",
+                                            "healthcare":  "hospital",
+                                            "name":  "AULIA MEDIKA",
+                                            "wheelchair":  "yes",
+                                            "type":  "Rumah Sakit"
+                                        },
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              101.4604547,
+                                                              0.4992041
+                                                          ]
+                                      }
+                     },
+                     {
+                         "type":  "Feature",
+                         "properties":  {
+                                            "osm_id":  7405615254,
+                                            "osm_type":  "node",
+                                            "amenity":  "hospital",
+                                            "addr:city":  "Pekanbaru",
+                                            "addr:housenumber":  "2",
+                                            "addr:postcode":  "28156",
+                                            "addr:street":  "Jalan Diponegoro",
+                                            "email":  "rsudarifinachmad@riau.go.id",
+                                            "emergency":  "yes",
+                                            "healthcare":  "hospital",
+                                            "healthcare:speciality":  "general",
+                                            "name":  "RSUD Arifin Achmad Provinsi Riau",
+                                            "operator":  "Pemerintah Provinsi Riau",
+                                            "operator:type":  "public",
+                                            "phone":  "(0761) 21618",
+                                            "type":  "Rumah Sakit"
+                                        },
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              101.4518418,
+                                                              0.5214074
+                                                          ]
+                                      }
+                     },
+                     {
+                         "type":  "Feature",
+                         "properties":  {
+                                            "osm_id":  9852463307,
+                                            "osm_type":  "node",
+                                            "amenity":  "hospital",
+                                            "addr:city":  "Pekanbaru",
+                                            "addr:district":  "Kecamatan Marpoyan Damai",
+                                            "addr:province":  "Riau",
+                                            "addr:subdistrict":  "Kelurahan Wonorejo",
+                                            "healthcare":  "hospital",
+                                            "name":  "RS Prof. Dr. Tabrani Wonorejo",
+                                            "type":  "Rumah Sakit"
+                                        },
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              101.4499438,
+                                                              0.5082685
+                                                          ]
+                                      }
+                     },
+                     {
+                         "type":  "Feature",
+                         "properties":  {
+                                            "osm_id":  9941275420,
+                                            "osm_type":  "node",
+                                            "amenity":  "hospital",
+                                            "addr:city":  "Pekanbaru",
+                                            "addr:province":  "Riau",
+                                            "addr:street":  "Jalan Jenderal Sudirman",
+                                            "healthcare":  "hospital",
+                                            "name":  "Rumah Sakit Awal Bros Pekanbaru",
+                                            "type":  "Rumah Sakit"
+                                        },
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              101.4564735,
+                                                              0.4968433
+                                                          ]
+                                      }
+                     },
+                     {
+                         "type":  "Feature",
+                         "properties":  {
+                                            "osm_id":  10030089958,
+                                            "osm_type":  "node",
+                                            "amenity":  "hospital",
+                                            "healthcare":  "hospital",
+                                            "name":  "Annisa Medika 2",
+                                            "type":  "Rumah Sakit"
+                                        },
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              101.414871,
+                                                              0.463563
+                                                          ]
+                                      }
+                     },
+                     {
+                         "type":  "Feature",
+                         "properties":  {
+                                            "osm_id":  12281930175,
+                                            "osm_type":  "node",
+                                            "amenity":  "hospital",
+                                            "healthcare":  "hospital",
+                                            "name":  "Rumah sakit mata smec Pekanbaru",
+                                            "type":  "Rumah Sakit"
+                                        },
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              101.4403204,
+                                                              0.4800608
+                                                          ]
+                                      }
+                     },
+                     {
+                         "type":  "Feature",
+                         "properties":  {
+                                            "osm_id":  314263944,
+                                            "osm_type":  "way",
+                                            "amenity":  "hospital",
+                                            "addr:city":  "Pekanbaru",
+                                            "addr:district":  "Kecamatan Pekanbaru Kota",
+                                            "addr:full":  "Jalan Diponegoro No. 2 Pekanbaru â Riau",
+                                            "addr:housenumber":  "2",
+                                            "addr:postcode":  "28156",
+                                            "addr:province":  "Riau",
+                                            "addr:street":  "Jalan Diponegoro",
+                                            "addr:subdistrict":  "Sumahilang",
+                                            "emergency":  "yes",
+                                            "healthcare":  "hospital",
+                                            "name":  "RSUD Arifin Ahmad Pekanbaru",
+                                            "name:id":  "RSUD Arifin Ahmad Pekanbaru",
+                                            "operator:type":  "government",
+                                            "phone":  "(0761) 21618",
+                                            "website":  "http://rsudarifinachmad.riau.go.id",
+                                            "type":  "Rumah Sakit"
+                                        },
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              101.4513272,
+                                                              0.5229231
+                                                          ]
+                                      }
+                     },
+                     {
+                         "type":  "Feature",
+                         "properties":  {
+                                            "osm_id":  314450489,
+                                            "osm_type":  "way",
+                                            "amenity":  "hospital",
+                                            "access:roof":  "no",
+                                            "addr:full":  "Jalan Balam Sakti",
+                                            "building":  "yes",
+                                            "building:levels":  "2",
+                                            "building:roof":  "tile",
+                                            "building:structure":  "reinforced_masonry",
+                                            "building:walls":  "brick",
+                                            "capacity:persons":  "250-500",
+                                            "healthcare":  "hospital",
+                                            "name":  "Gedung Instalasi NAPZA",
+                                            "operator:type":  "government",
+                                            "type":  "Rumah Sakit"
+                                        },
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              101.3828476,
+                                                              0.4667573
+                                                          ]
+                                      }
+                     },
+                     {
+                         "type":  "Feature",
+                         "properties":  {
+                                            "osm_id":  327533890,
+                                            "osm_type":  "way",
+                                            "amenity":  "hospital",
+                                            "addr:full":  "Jl. H.R. Subrantas",
+                                            "building":  "hospital",
+                                            "building:levels":  "3",
+                                            "building:roof":  "concrete",
+                                            "building:structure":  "reinforced_masonry",
+                                            "building:walls":  "brick",
+                                            "healthcare":  "hospital",
+                                            "name":  "Klinik Pratama Mercy",
+                                            "type":  "Rumah Sakit"
+                                        },
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              101.3873747,
+                                                              0.46466
+                                                          ]
+                                      }
+                     },
+                     {
+                         "type":  "Feature",
+                         "properties":  {
+                                            "osm_id":  327533899,
+                                            "osm_type":  "way",
+                                            "amenity":  "hospital",
+                                            "access:roof":  "no",
+                                            "addr:full":  "Jalan Bina Widya",
+                                            "addr:street":  "Jalan Bina Widya UNRI Panam",
+                                            "building:levels":  "4-7",
+                                            "building:roof":  "tile",
+                                            "building:structure":  "reinforced_masonry",
+                                            "building:walls":  "brick",
+                                            "capacity:persons":  "500",
+                                            "healthcare":  "hospital",
+                                            "name":  "RS Pendidikan Universitas Riau",
+                                            "operator:type":  "government",
+                                            "type":  "Rumah Sakit"
+                                        },
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              101.3805723,
+                                                              0.4692638
+                                                          ]
+                                      }
+                     },
+                     {
+                         "type":  "Feature",
+                         "properties":  {
+                                            "osm_id":  327535439,
+                                            "osm_type":  "way",
+                                            "amenity":  "hospital",
+                                            "healthcare":  "hospital",
+                                            "name":  "Uwa Medika",
+                                            "operator:type":  "private",
+                                            "type":  "Rumah Sakit"
+                                        },
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              101.3952096,
+                                                              0.4646207
+                                                          ]
+                                      }
+                     },
+                     {
+                         "type":  "Feature",
+                         "properties":  {
+                                            "osm_id":  365631722,
+                                            "osm_type":  "way",
+                                            "amenity":  "hospital",
+                                            "addr:full":  "Jalan Melati No.60 Harjosari Kec. Sukajadi",
+                                            "addr:street":  "Jalan Melati",
+                                            "emergency":  "yes",
+                                            "healthcare":  "hospital",
+                                            "name":  "Rumah Sakit Islam Ibnu Sina",
+                                            "website":  "https://rsi-ibnusina.com/",
+                                            "type":  "Rumah Sakit"
+                                        },
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              101.4368387,
+                                                              0.5257578
+                                                          ]
+                                      }
+                     },
+                     {
+                         "type":  "Feature",
+                         "properties":  {
+                                            "osm_id":  369968998,
+                                            "osm_type":  "way",
+                                            "amenity":  "hospital",
+                                            "addr:street":  "Jl. Lembaga Pemasyarkatan",
+                                            "emergency":  "yes",
+                                            "healthcare":  "hospital",
+                                            "name":  "Pekanbaru Medical Centre",
+                                            "type":  "Rumah Sakit"
+                                        },
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              101.4623884,
+                                                              0.5091572
+                                                          ]
+                                      }
+                     },
+                     {
+                         "type":  "Feature",
+                         "properties":  {
+                                            "osm_id":  369970439,
+                                            "osm_type":  "way",
+                                            "amenity":  "hospital",
+                                            "addr:full":  "Jalan Jenderal Sudirman Nomor 134, Pekanbaru, Riau 28282",
+                                            "addr:street":  "Jalan Jenderal Sudirman",
+                                            "emergency":  "yes",
+                                            "healthcare":  "hospital",
+                                            "name":  "RS Syafira Pekanbaru",
+                                            "operator:type":  "private",
+                                            "website":  "https://www.rs-syafira.com/",
+                                            "type":  "Rumah Sakit"
+                                        },
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              101.4547917,
+                                                              0.4983138
+                                                          ]
+                                      }
+                     },
+                     {
+                         "type":  "Feature",
+                         "properties":  {
+                                            "osm_id":  369973707,
+                                            "osm_type":  "way",
+                                            "amenity":  "hospital",
+                                            "addr:city":  "Pekanbaru",
+                                            "addr:full":  "Jalan Ir Soekarno-Hatta Km 6.5,",
+                                            "addr:postcode":  "28282",
+                                            "addr:street":  "Jalan Soekarno Hatta",
+                                            "emergency":  "yes",
+                                            "healthcare":  "hospital",
+                                            "name":  "Eka Hospital",
+                                            "phone":  "0761 6989999",
+                                            "website":  "https://www.ekahospital.com/",
+                                            "type":  "Rumah Sakit"
+                                        },
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              101.4196855,
+                                                              0.4823929
+                                                          ]
+                                      }
+                     },
+                     {
+                         "type":  "Feature",
+                         "properties":  {
+                                            "osm_id":  419828093,
+                                            "osm_type":  "way",
+                                            "amenity":  "hospital",
+                                            "addr:housenumber":  "Km 14,5",
+                                            "addr:street":  "Jl. HR Subrantas",
+                                            "building":  "hospital",
+                                            "healthcare":  "hospital",
+                                            "healthcare:speciality":  "general;dentistry;maternity",
+                                            "name":  "Klinik Pratama Tsabita",
+                                            "type":  "Rumah Sakit"
+                                        },
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              101.3614719,
+                                                              0.4607822
+                                                          ]
+                                      }
+                     },
+                     {
+                         "type":  "Feature",
+                         "properties":  {
+                                            "osm_id":  460285916,
+                                            "osm_type":  "way",
+                                            "amenity":  "hospital",
+                                            "name":  "rumah sakit kasih ibu",
+                                            "type":  "Rumah Sakit"
+                                        },
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              101.3724532,
+                                                              0.5027393
+                                                          ]
+                                      }
+                     },
+                     {
+                         "type":  "Feature",
+                         "properties":  {
+                                            "osm_id":  465985829,
+                                            "osm_type":  "way",
+                                            "amenity":  "hospital",
+                                            "addr:city":  "Pekanbaru",
+                                            "addr:street":  "Jl. HR Soebrantas",
+                                            "building:floor":  "ceramics",
+                                            "building:levels":  "3",
+                                            "building:material":  "concrete",
+                                            "building:roof":  "tin",
+                                            "building:structure":  "confined_masonry",
+                                            "building:walls":  "brick",
+                                            "capacity:persons":  "250-500",
+                                            "healthcare":  "hospital",
+                                            "name":  "Rumah Sakit Jiwa Tampan",
+                                            "type":  "Rumah Sakit"
+                                        },
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              101.3821085,
+                                                              0.4654522
+                                                          ]
+                                      }
+                     },
+                     {
+                         "type":  "Feature",
+                         "properties":  {
+                                            "osm_id":  484368484,
+                                            "osm_type":  "way",
+                                            "amenity":  "hospital",
+                                            "emergency":  "yes",
+                                            "name":  "Liza Hospital",
+                                            "type":  "Rumah Sakit"
+                                        },
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              101.360704,
+                                                              0.4852974
+                                                          ]
+                                      }
+                     },
+                     {
+                         "type":  "Feature",
+                         "properties":  {
+                                            "osm_id":  485347354,
+                                            "osm_type":  "way",
+                                            "amenity":  "hospital",
+                                            "healthcare":  "hospital",
+                                            "name":  "Puskesmas Simpang Tiga",
+                                            "type":  "Rumah Sakit"
+                                        },
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              101.4530102,
+                                                              0.4635334
+                                                          ]
+                                      }
+                     },
+                     {
+                         "type":  "Feature",
+                         "properties":  {
+                                            "osm_id":  485615437,
+                                            "osm_type":  "way",
+                                            "amenity":  "hospital",
+                                            "healthcare":  "hospital",
+                                            "name":  "Puskesmas Plus Sapta Taruna",
+                                            "operator":  "Pemerintah Kota Pekanbaru",
+                                            "operator:type":  "government",
+                                            "type":  "Rumah Sakit"
+                                        },
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              101.4746709,
+                                                              0.5042453
+                                                          ]
+                                      }
+                     },
+                     {
+                         "type":  "Feature",
+                         "properties":  {
+                                            "osm_id":  485847881,
+                                            "osm_type":  "way",
+                                            "amenity":  "hospital",
+                                            "addr:street":  "GANG NURI",
+                                            "emergency":  "yes",
+                                            "healthcare":  "hospital",
+                                            "name":  "Tukang Urut",
+                                            "type":  "Rumah Sakit"
+                                        },
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              101.3735297,
+                                                              0.4676425
+                                                          ]
+                                      }
+                     },
+                     {
+                         "type":  "Feature",
+                         "properties":  {
+                                            "osm_id":  593460202,
+                                            "osm_type":  "way",
+                                            "amenity":  "hospital",
+                                            "addr:city":  "Pekanbaru",
+                                            "addr:postcode":  "28131",
+                                            "addr:street":  "Jalan Ronggo Warsito",
+                                            "healthcare":  "hospital",
+                                            "healthcare:speciality":  "general",
+                                            "name":  "RSIA Zainab",
+                                            "type":  "Rumah Sakit"
+                                        },
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              101.4546642,
+                                                              0.5138657
+                                                          ]
+                                      }
+                     },
+                     {
+                         "type":  "Feature",
+                         "properties":  {
+                                            "osm_id":  608044458,
+                                            "osm_type":  "way",
+                                            "amenity":  "hospital",
+                                            "healthcare":  "hospital",
+                                            "name":  "Aulya hospital",
+                                            "type":  "Rumah Sakit"
+                                        },
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              101.4419169,
+                                                              0.5115717
+                                                          ]
+                                      }
+                     },
+                     {
+                         "type":  "Feature",
+                         "properties":  {
+                                            "osm_id":  670844776,
+                                            "osm_type":  "way",
+                                            "amenity":  "hospital",
+                                            "access:roof":  "yes",
+                                            "addr:city":  "Pekanbaru",
+                                            "addr:full":  "Jalan HR. Soebrantas Nomor 88 Panam Pekanbaru",
+                                            "building":  "hospital",
+                                            "building:condition":  "good",
+                                            "building:floor":  "ceramics",
+                                            "building:levels":  "6",
+                                            "building:material":  "brick",
+                                            "building:roof":  "concrete",
+                                            "building:structure":  "Rangka Beton",
+                                            "capacity:persons":  "600",
+                                            "ground_floor:height":  "+1",
+                                            "healthcare":  "hospital",
+                                            "name":  "RS Awal Bros Panam",
+                                            "operator:type":  "private",
+                                            "source":  "Servey",
+                                            "website":  "https://awalbros.com/branch/panam/",
+                                            "type":  "Rumah Sakit"
+                                        },
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              101.3903462,
+                                                              0.4631627
+                                                          ]
+                                      }
+                     },
+                     {
+                         "type":  "Feature",
+                         "properties":  {
+                                            "osm_id":  782997982,
+                                            "osm_type":  "way",
+                                            "amenity":  "hospital",
+                                            "addr:full":  "Jalan Jendral Sudirman no. 117 Pekanbaru",
+                                            "building":  "hospital",
+                                            "capacity":  "233",
+                                            "healthcare":  "hospital",
+                                            "name":  "Rumah Sakit Awal Bros Pekanbaru",
+                                            "operator:type":  "private",
+                                            "type":  "Rumah Sakit"
+                                        },
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              101.4564109,
+                                                              0.4965724
+                                                          ]
+                                      }
+                     },
+                     {
+                         "type":  "Feature",
+                         "properties":  {
+                                            "osm_id":  783791271,
+                                            "osm_type":  "way",
+                                            "amenity":  "hospital",
+                                            "addr:city":  "Pekanbaru",
+                                            "addr:full":  "Jalan Jendral Ahmad Yani No.73, Tanah Datar, Kecamatan Pekanbaru Kota, Kota Pekanbaru, Riau 28156",
+                                            "healthcare":  "hospital",
+                                            "name":  "Rumah Sakit Awal Bros Ahmad Yani",
+                                            "operator:type":  "private",
+                                            "website":  "https://awalbros.com/",
+                                            "type":  "Rumah Sakit"
+                                        },
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              101.4441762,
+                                                              0.521133
+                                                          ]
+                                      }
+                     },
+                     {
+                         "type":  "Feature",
+                         "properties":  {
+                                            "osm_id":  785085541,
+                                            "osm_type":  "way",
+                                            "amenity":  "hospital",
+                                            "addr:city":  "Pekanbaru",
+                                            "addr:full":  "Jalan HR. Soebrantas Panam No.63, Sidomulyo Bar., Kec. Tampan, Kota Pekanbaru, Riau 28291",
+                                            "addr:housenumber":  "63",
+                                            "addr:street":  "Jalan HR Soebrantas",
+                                            "healthcare":  "hospital",
+                                            "name":  "Rumah Sakit Aulia",
+                                            "operator:type":  "private",
+                                            "website":  "https://www.auliahospital.co.id/",
+                                            "type":  "Rumah Sakit"
+                                        },
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              101.3853481,
+                                                              0.4634269
+                                                          ]
+                                      }
+                     },
+                     {
+                         "type":  "Feature",
+                         "properties":  {
+                                            "osm_id":  918692695,
+                                            "osm_type":  "way",
+                                            "amenity":  "hospital",
+                                            "addr:city":  "Pekanbaru",
+                                            "addr:street":  "Jl. Adi Sucipto",
+                                            "healthcare":  "hospital",
+                                            "name":  "Rumah Sakit AURI",
+                                            "type":  "Rumah Sakit"
+                                        },
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              101.4300459,
+                                                              0.4632413
+                                                          ]
+                                      }
+                     },
+                     {
+                         "type":  "Feature",
+                         "properties":  {
+                                            "osm_id":  1029246990,
+                                            "osm_type":  "way",
+                                            "amenity":  "hospital",
+                                            "healthcare":  "hospital",
+                                            "name":  "RS Prima Pekanbaru",
+                                            "type":  "Rumah Sakit"
+                                        },
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              101.4006284,
+                                                              0.4960685
+                                                          ]
+                                      }
+                     },
+                     {
+                         "type":  "Feature",
+                         "properties":  {
+                                            "osm_id":  1251834260,
+                                            "osm_type":  "way",
+                                            "amenity":  "hospital",
+                                            "healthcare":  "hospital",
+                                            "name":  "Rumah Sakit 66",
+                                            "type":  "Rumah Sakit"
+                                        },
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              101.4478354,
+                                                              0.5183286
+                                                          ]
+                                      }
+                     },
+                     {
+                         "type":  "Feature",
+                         "properties":  {
+                                            "osm_id":  1293729479,
+                                            "osm_type":  "way",
+                                            "amenity":  "hospital",
+                                            "addr:street":  "Jalan Kampar",
+                                            "healthcare":  "hospital",
+                                            "landuse":  "military",
+                                            "name":  "Rumah Sakit Tentara Pekanbaru",
+                                            "name:en":  "Pekanbaru Army Hospital",
+                                            "official_name":  "Rumah Sakit Tentara TK IV 01.07.04 Pekanbaru",
+                                            "type":  "Rumah Sakit"
+                                        },
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              101.4408873,
+                                                              0.5365176
+                                                          ]
+                                      }
+                     },
+                     {
+                         "type":  "Feature",
+                         "properties":  {
+                                            "osm_id":  1327543294,
+                                            "osm_type":  "way",
+                                            "amenity":  "hospital",
+                                            "healthcare":  "hospital",
+                                            "name":  "Rumah sakit mata smec Pekanbaru",
+                                            "type":  "Rumah Sakit"
+                                        },
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              101.4403465,
+                                                              0.480091
+                                                          ]
+                                      }
+                     },
+                     {
+                         "type":  "Feature",
+                         "properties":  {
+                                            "osm_id":  1384273553,
+                                            "osm_type":  "way",
+                                            "amenity":  "hospital",
+                                            "name":  "Rumah Sakit Hermina Pekanbaru",
+                                            "type":  "Rumah Sakit"
+                                        },
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              101.4125405,
+                                                              0.4987652
+                                                          ]
+                                      }
+                     }
+                 ]
 }

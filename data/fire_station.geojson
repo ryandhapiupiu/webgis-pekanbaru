@@ -1,33 +1,166 @@
-{
-  "type": "FeatureCollection",
-  "features": [
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "Dinas Pemadam Kebakaran Pekanbaru",
-        "alamat": "Jl. Cempaka No.1, Padang Bulan",
-        "telepon": "113 / (0761) 22018",
-        "jumlah_armada": "15 Unit Mobil",
-        "jam_operasional": "24 Jam"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [101.4428, 0.5306]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "Pos Pemadam Kebakaran Tampan",
-        "alamat": "Jl. HR. Soebrantas",
-        "telepon": "(0761) 63113",
-        "jumlah_armada": "5 Unit Mobil",
-        "jam_operasional": "24 Jam"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [101.3950, 0.4650]
-      }
-    }
-  ]
+﻿{
+    "type":  "FeatureCollection",
+    "name":  "pemadam_kebakaran_pekanbaru",
+    "features":  [
+                     {
+                         "type":  "Feature",
+                         "properties":  {
+                                            "osm_id":  2111634861,
+                                            "osm_type":  "node",
+                                            "amenity":  "fire_station",
+                                            "source_filter":  "amenity=fire_station OR emergency=fire_station OR name~pemadam|damkar|fire",
+                                            "name":  "Rumbai Camp Fire Department",
+                                            "type":  "Pemadam Kebakaran"
+                                        },
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              101.4406868,
+                                                              0.5803129
+                                                          ]
+                                      }
+                     },
+                     {
+                         "type":  "Feature",
+                         "properties":  {
+                                            "osm_id":  3182907197,
+                                            "osm_type":  "node",
+                                            "amenity":  "fire_station",
+                                            "source_filter":  "amenity=fire_station OR emergency=fire_station OR name~pemadam|damkar|fire",
+                                            "addr:city":  "Pekanbaru",
+                                            "addr:postcode":  "28261",
+                                            "addr:street":  "Jl. Yos Sudarso",
+                                            "name":  "Dinas Pemadam Kebakaran",
+                                            "type":  "Pemadam Kebakaran"
+                                        },
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              101.4323434,
+                                                              0.5630418
+                                                          ]
+                                      }
+                     },
+                     {
+                         "type":  "Feature",
+                         "properties":  {
+                                            "osm_id":  3243088126,
+                                            "osm_type":  "node",
+                                            "amenity":  "fire_station",
+                                            "source_filter":  "amenity=fire_station OR emergency=fire_station OR name~pemadam|damkar|fire",
+                                            "name":  "Pemadam Kebakaran",
+                                            "type":  "Pemadam Kebakaran"
+                                        },
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              101.5275322,
+                                                              0.4653238
+                                                          ]
+                                      }
+                     },
+                     {
+                         "type":  "Feature",
+                         "properties":  {
+                                            "osm_id":  3341547196,
+                                            "osm_type":  "node",
+                                            "amenity":  "fire_station",
+                                            "source_filter":  "amenity=fire_station OR emergency=fire_station OR name~pemadam|damkar|fire",
+                                            "name":  "Pos Damkar Bukit Raya",
+                                            "type":  "Pemadam Kebakaran"
+                                        },
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              101.4547376,
+                                                              0.4693903
+                                                          ]
+                                      }
+                     },
+                     {
+                         "type":  "Feature",
+                         "properties":  {
+                                            "osm_id":  12620249594,
+                                            "osm_type":  "node",
+                                            "amenity":  "fire_station",
+                                            "source_filter":  "amenity=fire_station OR emergency=fire_station OR name~pemadam|damkar|fire",
+                                            "name":  "Dinas Pemadam Kebakaran dan Penyelamatan",
+                                            "type":  "Pemadam Kebakaran"
+                                        },
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              101.4235876,
+                                                              0.4455907
+                                                          ]
+                                      }
+                     },
+                     {
+                         "type":  "Feature",
+                         "properties":  {
+                                            "osm_id":  13504829551,
+                                            "osm_type":  "node",
+                                            "amenity":  "fire_station",
+                                            "source_filter":  "amenity=fire_station OR emergency=fire_station OR name~pemadam|damkar|fire",
+                                            "name":  "Dinas Pemadam Kebakaran dan Penyelamatan",
+                                            "office":  "government",
+                                            "operator":  "Pemerintah Kota Pekanbaru",
+                                            "type":  "Pemadam Kebakaran"
+                                        },
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              101.5429643,
+                                                              0.5192833
+                                                          ]
+                                      }
+                     },
+                     {
+                         "type":  "Feature",
+                         "properties":  {
+                                            "osm_id":  593804831,
+                                            "osm_type":  "way",
+                                            "amenity":  "fire_station",
+                                            "source_filter":  "amenity=fire_station OR emergency=fire_station OR name~pemadam|damkar|fire",
+                                            "building":  "yes",
+                                            "name":  "Dinas Pemadam Kebakaran dan Penyelamatan Pekanbaru",
+                                            "type":  "Pemadam Kebakaran"
+                                        },
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              101.4412769,
+                                                              0.5282055
+                                                          ]
+                                      }
+                     },
+                     {
+                         "type":  "Feature",
+                         "properties":  {
+                                            "osm_id":  670865936,
+                                            "osm_type":  "way",
+                                            "amenity":  "fire_station",
+                                            "source_filter":  "amenity=fire_station OR emergency=fire_station OR name~pemadam|damkar|fire",
+                                            "access:roof":  "no",
+                                            "addr:city":  "Pekanbaru",
+                                            "addr:full":  "Jalan HR Subrantas",
+                                            "building":  "fire_station",
+                                            "building:floor":  "ceramics",
+                                            "building:levels":  "2",
+                                            "building:material":  "brick",
+                                            "building:roof":  "tin",
+                                            "building:structure":  "confined_masonry",
+                                            "capacity:persons":  "0-50",
+                                            "name":  "Dinas Pemadam Kebakaran Pos Jaga Simpang Baru Panam",
+                                            "type":  "Pemadam Kebakaran"
+                                        },
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              101.3738986,
+                                                              0.4648593
+                                                          ]
+                                      }
+                     }
+                 ]
 }

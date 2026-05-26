@@ -1,46 +1,852 @@
-{
-  "type": "FeatureCollection",
-  "features": [
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "SMA Negeri 1 Pekanbaru",
-        "alamat": "Jl. Sultan Syarif Qasim No.159",
-        "akreditasi": "A",
-        "jumlah_siswa": "1200",
-        "status": "Negeri"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [101.4497, 0.5361]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "SMP Negeri 1 Pekanbaru",
-        "alamat": "Jl. Sultan Syarif Qasim No.157",
-        "akreditasi": "A",
-        "jumlah_siswa": "850",
-        "status": "Negeri"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [101.4510, 0.5375]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "Universitas Riau (UNRI) - Kampus Gobah",
-        "alamat": "Jl. Pattimura No.9",
-        "fakultas": "Hukum & Pascasarjana",
-        "status": "Perguruan Tinggi Negeri"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [101.4560, 0.5180]
-      }
-    }
-  ]
+﻿{
+    "type":  "FeatureCollection",
+    "name":  "sma_pekanbaru",
+    "features":  [
+                     {
+                         "type":  "Feature",
+                         "properties":  {
+                                            "osm_id":  3101742944,
+                                            "osm_type":  "node",
+                                            "amenity":  "school",
+                                            "name":  "SMA Negeri 12 Pekanbaru",
+                                            "type":  "SMA"
+                                        },
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              101.465735,
+                                                              0.4566179
+                                                          ]
+                                      }
+                     },
+                     {
+                         "type":  "Feature",
+                         "properties":  {
+                                            "osm_id":  3235038925,
+                                            "osm_type":  "node",
+                                            "amenity":  "school",
+                                            "name":  "SMA Negeri 5 Pekanbaru",
+                                            "operator:type":  "government",
+                                            "school:type_idn":  "sma",
+                                            "short_name":  "SMAN 5 Pekanbaru",
+                                            "wikidata":  "Q12510641",
+                                            "type":  "SMA"
+                                        },
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              101.4425165,
+                                                              0.5027703
+                                                          ]
+                                      }
+                     },
+                     {
+                         "type":  "Feature",
+                         "properties":  {
+                                            "osm_id":  4215567940,
+                                            "osm_type":  "node",
+                                            "amenity":  "school",
+                                            "name":  "SMAN 7 Pekanbaru",
+                                            "operator:type":  "government",
+                                            "school:type_idn":  "sma",
+                                            "short_name":  "SMAN 7 Pekanbaru",
+                                            "type":  "SMA"
+                                        },
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              101.4308071,
+                                                              0.5423157
+                                                          ]
+                                      }
+                     },
+                     {
+                         "type":  "Feature",
+                         "properties":  {
+                                            "osm_id":  4781648271,
+                                            "osm_type":  "node",
+                                            "amenity":  "school",
+                                            "addr:city":  "Pekanbaru",
+                                            "addr:postcode":  "28281",
+                                            "addr:street":  "Jl. Adi Sucipto",
+                                            "name":  "SMAN 4 Pekanbaru",
+                                            "type":  "SMA"
+                                        },
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              101.4336221,
+                                                              0.4621983
+                                                          ]
+                                      }
+                     },
+                     {
+                         "type":  "Feature",
+                         "properties":  {
+                                            "osm_id":  5183186417,
+                                            "osm_type":  "node",
+                                            "amenity":  "school",
+                                            "addr:city":  "Pekanbaru",
+                                            "addr:district":  "Kecamatan Sail",
+                                            "addr:postcode":  "28132",
+                                            "addr:province":  "Riau",
+                                            "addr:street":  "Jalan Ronggo Warsito",
+                                            "addr:subdistrict":  "Suka Maju",
+                                            "grades":  "10-12",
+                                            "name":  "SMA Santa Maria Pekanbaru",
+                                            "operator":  "Yayasan Prayoga Riau",
+                                            "type":  "SMA"
+                                        },
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              101.4575091,
+                                                              0.5151401
+                                                          ]
+                                      }
+                     },
+                     {
+                         "type":  "Feature",
+                         "properties":  {
+                                            "osm_id":  5184298089,
+                                            "osm_type":  "node",
+                                            "amenity":  "school",
+                                            "name":  "SMA Taruna Pekanbaru",
+                                            "type":  "SMA"
+                                        },
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              101.4302986,
+                                                              0.5267844
+                                                          ]
+                                      }
+                     },
+                     {
+                         "type":  "Feature",
+                         "properties":  {
+                                            "osm_id":  5277809117,
+                                            "osm_type":  "node",
+                                            "amenity":  "school",
+                                            "name":  "SMA NEGERI 2 PEKANBARU",
+                                            "type":  "SMA"
+                                        },
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              101.4331767,
+                                                              0.5218741
+                                                          ]
+                                      }
+                     },
+                     {
+                         "type":  "Feature",
+                         "properties":  {
+                                            "osm_id":  6039487872,
+                                            "osm_type":  "node",
+                                            "amenity":  "school",
+                                            "name":  "SMA Plus Bina Bangsa",
+                                            "type":  "SMA"
+                                        },
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              101.4346906,
+                                                              0.5137841
+                                                          ]
+                                      }
+                     },
+                     {
+                         "type":  "Feature",
+                         "properties":  {
+                                            "osm_id":  6449048297,
+                                            "osm_type":  "node",
+                                            "amenity":  "school",
+                                            "name":  "SMA Negri 16",
+                                            "type":  "SMA"
+                                        },
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              101.47486,
+                                                              0.5744251
+                                                          ]
+                                      }
+                     },
+                     {
+                         "type":  "Feature",
+                         "properties":  {
+                                            "osm_id":  6959270459,
+                                            "osm_type":  "node",
+                                            "amenity":  "school",
+                                            "name":  "SMA Negeri 9 Pekanbaru",
+                                            "operator:type":  "government",
+                                            "school:type_idn":  "sma",
+                                            "short_name":  "SMAN 9 Pekanbaru",
+                                            "wikidata":  "Q12510729",
+                                            "type":  "SMA"
+                                        },
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              101.458115,
+                                                              0.5259174
+                                                          ]
+                                      }
+                     },
+                     {
+                         "type":  "Feature",
+                         "properties":  {
+                                            "osm_id":  8330433470,
+                                            "osm_type":  "node",
+                                            "amenity":  "school",
+                                            "name":  "SMA Negeri 15 Pekanbaru",
+                                            "operator:type":  "government",
+                                            "school:type_idn":  "sma",
+                                            "short_name":  "SMAN 15 Pekanbaru",
+                                            "type":  "SMA"
+                                        },
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              101.3925648,
+                                                              0.4426218
+                                                          ]
+                                      }
+                     },
+                     {
+                         "type":  "Feature",
+                         "properties":  {
+                                            "osm_id":  8330446883,
+                                            "osm_type":  "node",
+                                            "amenity":  "school",
+                                            "name":  "SMA Negeri 2 Pekanbaru",
+                                            "operator:type":  "government",
+                                            "school:type_idn":  "sma",
+                                            "short_name":  "SMAN 2 Pekanbaru",
+                                            "type":  "SMA"
+                                        },
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              101.4316043,
+                                                              0.5211836
+                                                          ]
+                                      }
+                     },
+                     {
+                         "type":  "Feature",
+                         "properties":  {
+                                            "osm_id":  8330456312,
+                                            "osm_type":  "node",
+                                            "amenity":  "school",
+                                            "name":  "SMA Negeri 10 Pekanbaru",
+                                            "operator:type":  "government",
+                                            "school:type_idn":  "sma",
+                                            "short_name":  "SMAN 10 Pekanbaru",
+                                            "wikidata":  "Q12510180",
+                                            "type":  "SMA"
+                                        },
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              101.4866746,
+                                                              0.4922688
+                                                          ]
+                                      }
+                     },
+                     {
+                         "type":  "Feature",
+                         "properties":  {
+                                            "osm_id":  8330593310,
+                                            "osm_type":  "node",
+                                            "amenity":  "school",
+                                            "name":  "SMA Negeri 12 Pekanbaru",
+                                            "operator:type":  "government",
+                                            "school:type_idn":  "sma",
+                                            "short_name":  "SMAN 12 Pekanbaru",
+                                            "wikidata":  "Q12510203",
+                                            "type":  "SMA"
+                                        },
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              101.3629572,
+                                                              0.489638
+                                                          ]
+                                      }
+                     },
+                     {
+                         "type":  "Feature",
+                         "properties":  {
+                                            "osm_id":  8330602421,
+                                            "osm_type":  "node",
+                                            "amenity":  "school",
+                                            "name":  "SMA Negeri Olahraga",
+                                            "operator:type":  "government",
+                                            "school:type_idn":  "sma",
+                                            "short_name":  "SMAN Olahraga",
+                                            "type":  "SMA"
+                                        },
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              101.4296544,
+                                                              0.5761288
+                                                          ]
+                                      }
+                     },
+                     {
+                         "type":  "Feature",
+                         "properties":  {
+                                            "osm_id":  8331310883,
+                                            "osm_type":  "node",
+                                            "amenity":  "school",
+                                            "name":  "SMA Negeri 11 Pekanbaru",
+                                            "operator:type":  "government",
+                                            "school:type_idn":  "sma",
+                                            "short_name":  "SMAN 11 Pekanbaru",
+                                            "wikidata":  "Q12510194",
+                                            "type":  "SMA"
+                                        },
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              101.4841045,
+                                                              0.5115025
+                                                          ]
+                                      }
+                     },
+                     {
+                         "type":  "Feature",
+                         "properties":  {
+                                            "osm_id":  8331336082,
+                                            "osm_type":  "node",
+                                            "amenity":  "school",
+                                            "name":  "SMA Negeri 14 Pekanbaru",
+                                            "operator:type":  "government",
+                                            "school:type_idn":  "sma",
+                                            "short_name":  "SMAN 14 Pekanbaru",
+                                            "type":  "SMA"
+                                        },
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              101.4682084,
+                                                              0.4495873
+                                                          ]
+                                      }
+                     },
+                     {
+                         "type":  "Feature",
+                         "properties":  {
+                                            "osm_id":  8331342724,
+                                            "osm_type":  "node",
+                                            "amenity":  "school",
+                                            "grades":  "10-12",
+                                            "name":  "SMA Negeri 6 Pekanbaru",
+                                            "operator:type":  "government",
+                                            "school:type_idn":  "sma",
+                                            "short_name":  "SMAN 6 Pekanbaru",
+                                            "wikidata":  "Q19739353",
+                                            "type":  "SMA"
+                                        },
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              101.4758742,
+                                                              0.5347442
+                                                          ]
+                                      }
+                     },
+                     {
+                         "type":  "Feature",
+                         "properties":  {
+                                            "osm_id":  10265787065,
+                                            "osm_type":  "node",
+                                            "amenity":  "school",
+                                            "name":  "SMP-SMA An Namiroh Pekanbaru",
+                                            "type":  "SMA"
+                                        },
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              101.4045532,
+                                                              0.4679835
+                                                          ]
+                                      }
+                     },
+                     {
+                         "type":  "Feature",
+                         "properties":  {
+                                            "osm_id":  11036742172,
+                                            "osm_type":  "node",
+                                            "amenity":  "school",
+                                            "name":  "SMP-SMA Islam Terpadu Al Bayyinah",
+                                            "type":  "SMA"
+                                        },
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              101.3884982,
+                                                              0.4703756
+                                                          ]
+                                      }
+                     },
+                     {
+                         "type":  "Feature",
+                         "properties":  {
+                                            "osm_id":  12813267610,
+                                            "osm_type":  "node",
+                                            "amenity":  "school",
+                                            "name":  "SMAN 18 Pekanbaru",
+                                            "type":  "SMA"
+                                        },
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              101.4651475,
+                                                              0.4779417
+                                                          ]
+                                      }
+                     },
+                     {
+                         "type":  "Feature",
+                         "properties":  {
+                                            "osm_id":  12813267611,
+                                            "osm_type":  "node",
+                                            "amenity":  "school",
+                                            "name":  "SMAS Widya Graha",
+                                            "ref":  "B",
+                                            "type":  "SMA"
+                                        },
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              101.4705279,
+                                                              0.5082096
+                                                          ]
+                                      }
+                     },
+                     {
+                         "type":  "Feature",
+                         "properties":  {
+                                            "osm_id":  13792599825,
+                                            "osm_type":  "node",
+                                            "amenity":  "school",
+                                            "denomination":  "landmark",
+                                            "education":  "school",
+                                            "grades":  "9-12",
+                                            "name":  "Lapangan SMA YLPI",
+                                            "religion":  "muslim",
+                                            "type":  "SMA"
+                                        },
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              101.4508979,
+                                                              0.445235
+                                                          ]
+                                      }
+                     },
+                     {
+                         "type":  "Feature",
+                         "properties":  {
+                                            "osm_id":  312209908,
+                                            "osm_type":  "way",
+                                            "amenity":  "school",
+                                            "addr:city":  "Pekanbaru",
+                                            "addr:postcode":  "28261",
+                                            "addr:street":  "Jalan Pattimura - Rumbai",
+                                            "name":  "TK, SMP, SMA Budhi Luhur",
+                                            "postal_code":  "28261",
+                                            "type":  "SMA"
+                                        },
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              101.4448867,
+                                                              0.5691897
+                                                          ]
+                                      }
+                     },
+                     {
+                         "type":  "Feature",
+                         "properties":  {
+                                            "osm_id":  312578956,
+                                            "osm_type":  "way",
+                                            "amenity":  "school",
+                                            "name":  "SMA Negeri 3 Pekanbaru",
+                                            "operator":  "pemerintah",
+                                            "type":  "SMA"
+                                        },
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              101.4281123,
+                                                              0.5712118
+                                                          ]
+                                      }
+                     },
+                     {
+                         "type":  "Feature",
+                         "properties":  {
+                                            "osm_id":  314249029,
+                                            "osm_type":  "way",
+                                            "amenity":  "school",
+                                            "addr:city":  "Pekanbaru",
+                                            "addr:street":  "Jalan Sultan Syarif Quasim",
+                                            "education":  "school",
+                                            "grades":  "10-12",
+                                            "name":  "SMA Negeri 1 Pekanbaru",
+                                            "name:id":  "SMA Negeri 1 Pekanbaru",
+                                            "name:ms":  "SMA Negeri 1 Pekanbaru",
+                                            "operator":  "P \u0026 K",
+                                            "operator:type":  "government",
+                                            "school:type_idn":  "sma",
+                                            "short_name":  "SMAN 1 Pekanbaru",
+                                            "short_name:id":  "SMAN 1 Pekanbaru",
+                                            "short_name:ms":  "SMAN 1 Pekanbaru",
+                                            "wikidata":  "Q12510386",
+                                            "type":  "SMA"
+                                        },
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              101.4542733,
+                                                              0.5257158
+                                                          ]
+                                      }
+                     },
+                     {
+                         "type":  "Feature",
+                         "properties":  {
+                                            "osm_id":  318105426,
+                                            "osm_type":  "way",
+                                            "amenity":  "school",
+                                            "name":  "SMA Handayani",
+                                            "type":  "SMA"
+                                        },
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              101.4554998,
+                                                              0.5242774
+                                                          ]
+                                      }
+                     },
+                     {
+                         "type":  "Feature",
+                         "properties":  {
+                                            "osm_id":  327534033,
+                                            "osm_type":  "way",
+                                            "amenity":  "school",
+                                            "access:roof":  "no",
+                                            "building:levels":  "3",
+                                            "building:roof":  "tin",
+                                            "building:structure":  "plastered",
+                                            "building:walls":  "brick",
+                                            "capacity:persons":  "800",
+                                            "name":  "tri bakti",
+                                            "type:id":  "smp dan sma",
+                                            "type":  "SMA"
+                                        },
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              101.429415,
+                                                              0.50439
+                                                          ]
+                                      }
+                     },
+                     {
+                         "type":  "Feature",
+                         "properties":  {
+                                            "osm_id":  327582929,
+                                            "osm_type":  "way",
+                                            "amenity":  "school",
+                                            "access:roof":  "no",
+                                            "building":  "school",
+                                            "building:levels":  "2",
+                                            "name":  "MAN 1",
+                                            "type:id":  "SMA",
+                                            "type":  "SMA"
+                                        },
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              101.4412487,
+                                                              0.5004141
+                                                          ]
+                                      }
+                     },
+                     {
+                         "type":  "Feature",
+                         "properties":  {
+                                            "osm_id":  327710537,
+                                            "osm_type":  "way",
+                                            "amenity":  "school",
+                                            "access:roof":  "yes",
+                                            "addr:city":  "Pekanbaru",
+                                            "addr:street":  "Jalan Lokomotif",
+                                            "building:levels":  "3",
+                                            "building:roof":  "concrete",
+                                            "building:structure":  "confined_masonry",
+                                            "building:walls":  "brick",
+                                            "name":  "Sekolah Kristen Kalam Kudus",
+                                            "religion":  "christian",
+                                            "type:id":  "TK, SD, SMP, SMA",
+                                            "type":  "SMA"
+                                        },
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              101.4668922,
+                                                              0.5325609
+                                                          ]
+                                      }
+                     },
+                     {
+                         "type":  "Feature",
+                         "properties":  {
+                                            "osm_id":  369535476,
+                                            "osm_type":  "way",
+                                            "amenity":  "school",
+                                            "addr:street":  "Jalan KH Ahmad Dahlan",
+                                            "name":  "SMA, SMK, SMP MUHAMMADIYAH",
+                                            "type":  "SMA"
+                                        },
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              101.4373605,
+                                                              0.5116379
+                                                          ]
+                                      }
+                     },
+                     {
+                         "type":  "Feature",
+                         "properties":  {
+                                            "osm_id":  419373887,
+                                            "osm_type":  "way",
+                                            "amenity":  "school",
+                                            "building":  "school",
+                                            "name":  "SMA PGRI",
+                                            "type":  "SMA"
+                                        },
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              101.4584134,
+                                                              0.5022755
+                                                          ]
+                                      }
+                     },
+                     {
+                         "type":  "Feature",
+                         "properties":  {
+                                            "osm_id":  536650386,
+                                            "osm_type":  "way",
+                                            "amenity":  "school",
+                                            "addr:city":  "Pekanbaru",
+                                            "addr:street":  "Jalan M. Yamin",
+                                            "name":  "SMP/SMA Setia Dharma",
+                                            "type":  "SMA"
+                                        },
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              101.4416003,
+                                                              0.5318041
+                                                          ]
+                                      }
+                     },
+                     {
+                         "type":  "Feature",
+                         "properties":  {
+                                            "osm_id":  593761361,
+                                            "osm_type":  "way",
+                                            "amenity":  "school",
+                                            "addr:city":  "Pekanbaru",
+                                            "addr:street":  "Jalan Kaharuddin Nasution",
+                                            "building":  "school",
+                                            "building:levels":  "1",
+                                            "name":  "SMA-YLPI",
+                                            "type":  "SMA"
+                                        },
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              101.4507219,
+                                                              0.4458626
+                                                          ]
+                                      }
+                     },
+                     {
+                         "type":  "Feature",
+                         "properties":  {
+                                            "osm_id":  593774969,
+                                            "osm_type":  "way",
+                                            "amenity":  "school",
+                                            "addr:city":  "Pekanbaru",
+                                            "addr:postcode":  "28281",
+                                            "addr:street":  "Jalan Adi Sucipto",
+                                            "name":  "SMAN 4 Pekanbaru",
+                                            "type":  "SMA"
+                                        },
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              101.4336577,
+                                                              0.4620502
+                                                          ]
+                                      }
+                     },
+                     {
+                         "type":  "Feature",
+                         "properties":  {
+                                            "osm_id":  1084543215,
+                                            "osm_type":  "way",
+                                            "amenity":  "school",
+                                            "building":  "yes",
+                                            "name":  "SMA Al Azhar Syifa Budi Pekanbaru II",
+                                            "type":  "SMA"
+                                        },
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              101.4591194,
+                                                              0.5191244
+                                                          ]
+                                      }
+                     },
+                     {
+                         "type":  "Feature",
+                         "properties":  {
+                                            "osm_id":  1118056808,
+                                            "osm_type":  "way",
+                                            "amenity":  "school",
+                                            "name":  "SMA Negeri 9 Pekanbaru",
+                                            "type":  "SMA"
+                                        },
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              101.4580708,
+                                                              0.5259811
+                                                          ]
+                                      }
+                     },
+                     {
+                         "type":  "Feature",
+                         "properties":  {
+                                            "osm_id":  1302173151,
+                                            "osm_type":  "way",
+                                            "amenity":  "school",
+                                            "grades":  "10-12",
+                                            "name":  "SMA Cendana Pekanbaru",
+                                            "religion":  "none",
+                                            "type":  "SMA"
+                                        },
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              101.4297255,
+                                                              0.586453
+                                                          ]
+                                      }
+                     },
+                     {
+                         "type":  "Feature",
+                         "properties":  {
+                                            "osm_id":  1352491547,
+                                            "osm_type":  "way",
+                                            "amenity":  "school",
+                                            "landuse":  "education",
+                                            "name":  "SMA Negeri 8 Pekanbaru",
+                                            "operator:type":  "government",
+                                            "school:type_idn":  "sma",
+                                            "short_name":  "SMAN 8 Pekanbaru",
+                                            "wikidata":  "Q19739412",
+                                            "type":  "SMA"
+                                        },
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              101.4582642,
+                                                              0.508339
+                                                          ]
+                                      }
+                     },
+                     {
+                         "type":  "Feature",
+                         "properties":  {
+                                            "osm_id":  1361117216,
+                                            "osm_type":  "way",
+                                            "amenity":  "school",
+                                            "name":  "SMA Darma Yudha",
+                                            "type":  "SMA"
+                                        },
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              101.4031408,
+                                                              0.5302035
+                                                          ]
+                                      }
+                     },
+                     {
+                         "type":  "Feature",
+                         "properties":  {
+                                            "osm_id":  1382204412,
+                                            "osm_type":  "way",
+                                            "amenity":  "school",
+                                            "name":  "Sekolah Menengah Atas Negeri (SMAN) 10 Pekanbaru",
+                                            "type":  "SMA"
+                                        },
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              101.486754,
+                                                              0.4922713
+                                                          ]
+                                      }
+                     },
+                     {
+                         "type":  "Feature",
+                         "properties":  {
+                                            "osm_id":  1382224506,
+                                            "osm_type":  "way",
+                                            "amenity":  "school",
+                                            "name":  "SMA Amal Mulia Boarding School",
+                                            "ref:NPSN":  "70003740",
+                                            "religion":  "muslim",
+                                            "type":  "SMA"
+                                        },
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              101.4677845,
+                                                              0.5006207
+                                                          ]
+                                      }
+                     },
+                     {
+                         "type":  "Feature",
+                         "properties":  {
+                                            "osm_id":  7690925,
+                                            "osm_type":  "relation",
+                                            "amenity":  "school",
+                                            "name":  "SMA Serirama YLPI",
+                                            "type":  "SMA"
+                                        },
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              101.4412367,
+                                                              0.5325957
+                                                          ]
+                                      }
+                     }
+                 ]
 }

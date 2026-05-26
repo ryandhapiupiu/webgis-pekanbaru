@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="id">
 <head>
     <meta charset="UTF-8">
@@ -13,42 +13,202 @@
     
     <style>
         :root {
-            --primary: #2563eb;
-            --surface: rgba(255, 255, 255, 0.85);
-            --surface-blur: blur(12px);
-            --text-main: #1e293b;
-            --text-light: #64748b;
+            --primary: #5b7fff;
+            --secondary: #41c0ff;
+            --success: #22c55e;
+            --warning: #f59e0b;
+            --danger: #ef4444;
+            --bg-dark: #121b2e;
+            --surface: rgba(20, 31, 51, 0.92);
+            --surface-soft: rgba(255, 255, 255, 0.12);
+            --surface-bright: rgba(255, 255, 255, 0.9);
+            --card: rgba(255,255,255,0.10);
+            --text-main: #e2e8f8;
+            --text-light: rgba(226, 232, 248, 0.72);
+            --text-muted: rgba(226, 232, 248, 0.64);
+            --surface-blur: blur(14px);
+            --gradient-primary: linear-gradient(135deg, #5b7fff 0%, #41c0ff 100%);
+            --gradient-hot: linear-gradient(135deg, #fb7185 0%, #f97316 100%);
+        }
+
+        * {
+            box-sizing: border-box;
         }
 
         body {
             margin: 0;
             padding: 0;
             font-family: 'Inter', sans-serif;
-            background-color: #f8fafc;
+            background-color: var(--bg-dark);
             color: var(--text-main);
-            overflow: hidden;
+            min-height: 100vh;
+            overflow: auto;
         }
 
-        #map {
-            width: 100vw;
-            height: 100vh;
-            z-index: 1;
+        /* Landing Page */
+        .landing-page {
+            position: fixed;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(18, 30, 52, 0.98) 0%, rgba(35, 50, 88, 0.90) 55%, rgba(18, 24, 40, 0.98) 100%);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 2000;
+            transition: opacity 0.5s ease, transform 0.5s ease;
+            overflow-y: auto;
         }
 
-        /* Modern Floating Title */
+            /* Landing Page - Dark Hero */
+            .landing-page {
+                position: fixed;
+                inset: 0;
+                background: linear-gradient(120deg, rgba(124,92,255,0.08) 0%, rgba(0,212,255,0.05) 45%, transparent 70%),
+                            radial-gradient(900px 420px at 88% 10%, rgba(255,255,255,0.06), transparent 20%),
+                            radial-gradient(900px 420px at 10% 18%, rgba(255,255,255,0.04), transparent 18%),
+                            var(--bg-dark);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                z-index: 2000;
+                padding: 32px;
+            }
+
+            .landing-content {
+                width: 100%;
+                max-width: 1200px;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 18px;
+                color: var(--text-main);
+            }
+
+            .nav-top {
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                color: var(--text-main);
+            }
+
+            .logo { font-weight: 800; letter-spacing: 1px; }
+
+            .nav-actions button { background: rgba(255,255,255,0.08); color: var(--text-main); border: 1px solid rgba(255,255,255,0.12); padding: 8px 12px; border-radius: 8px; }
+
+            .hero {
+                margin-top: 36px;
+                align-self: stretch;
+                display: flex;
+                gap: 24px;
+                align-items: center;
+                justify-content: space-between;
+            }
+
+            .hero-left {
+                max-width: 650px;
+            }
+
+            .landing-title { font-size: 56px; margin: 0; font-weight: 800; color: #ffffff; }
+            .landing-subtitle { margin: 12px 0 0 0; color: rgba(255,255,255,0.90); font-size: 18px; }
+
+            .search-hero {
+                margin-top: 22px;
+                display: flex;
+                gap: 12px;
+                align-items: center;
+            }
+
+            .search-hero input {
+                width: 520px;
+                max-width: 60vw;
+                padding: 16px 20px;
+                border-radius: 999px;
+                border: 1px solid rgba(255,255,255,0.28);
+                background: rgba(255,255,255,0.20);
+                color: #0f172a;
+                font-size: 16px;
+                box-shadow: inset 0 6px 24px rgba(0, 0, 0, 0.16);
+            }
+
+            .search-hero button { padding: 12px 20px; border-radius: 999px; background: linear-gradient(90deg,var(--primary),var(--secondary)); color: white; border: none; font-weight: 700; }
+
+            .hero-cta { display:flex; gap:12px; margin-top: 18px; }
+
+            .landing-features { display:flex; gap:14px; margin-top: 30px; }
+
+            .feature-card {
+                background: rgba(15, 23, 42, 0.95);
+                padding: 18px 20px;
+                border-radius: 18px;
+                color: #4f4f50;
+                min-width: 180px;
+                border: 1px solid rgba(255,255,255,0.14);
+                box-shadow: 0 18px 45px rgba(0, 0, 0, 0.18);
+                transition: transform 0.25s ease, border-color 0.25s ease, background 0.25s ease;
+            }
+
+            .feature-card:hover,
+            .feature-card:focus-visible {
+                transform: translateY(-3px);
+                border-color: rgba(255,255,255,0.22);
+                background: rgba(20, 30, 57, 0.98);
+                outline: none;
+            }
+
+            .feature-title {
+                font-size: 1rem;
+                font-weight: 700;
+                color: #000000;
+                margin-bottom: 8px;
+            }
+
+            .feature-description {
+                color: rgba(248, 248, 252, 0.78);
+                font-size: 0.95rem;
+                line-height: 1.45;
+            }
+
+            /* Map and panels styling (dark) */
+            #map { position: absolute; inset: 0; z-index: 1; width: 100%; height: 100%; background: #f3f4f6; }
+
+            .map-title { display:none; }
+
+            .legend-panel { background: rgba(15, 23, 42, 0.92); color: #f8fafc; border: 1px solid rgba(255,255,255,0.10); }
+
+            .search-panel, .bookmarks-panel { background: rgba(15, 23, 42, 0.95); color: #f8fafc; border: 1px solid rgba(255,255,255,0.12); }
+
+            /* Modal */
+            .modal-content { background: rgba(15, 23, 42, 0.96); color: #f8fafc; }
+
+            /* Responsive tweaks */
+            @media (max-width: 900px) {
+                .landing-title { font-size: 36px; }
+                .search-hero input { width: 320px; }
+                .hero { flex-direction: column; align-items:flex-start; }
+            }
+
+        .map-title, .legend-panel {
+            display: none;
+        }
+
+        .map-title.active, .legend-panel.active {
+            display: block;
+        }
+
         .map-title {
             position: absolute;
             top: 24px;
             left: 50%;
             transform: translateX(-50%);
-            z-index: 1000;
-            background: var(--surface);
+            z-index: 1100;
+            background: rgba(255,255,255,0.92);
             backdrop-filter: var(--surface-blur);
             -webkit-backdrop-filter: var(--surface-blur);
             padding: 14px 28px;
             border-radius: 100px;
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-            border: 1px solid rgba(255, 255, 255, 0.6);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+            border: 1px solid rgba(15, 23, 42, 0.12);
             display: flex;
             align-items: center;
             gap: 12px;
@@ -64,18 +224,31 @@
             margin: 0;
             font-size: 1.25rem;
             font-weight: 700;
-            background: linear-gradient(135deg, #2563eb, #0ea5e9);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            color: #0f172a;
             letter-spacing: -0.5px;
         }
 
         .map-title i {
             color: var(--primary);
             font-size: 1.4rem;
-            background: linear-gradient(135deg, #2563eb, #0ea5e9);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+        }
+
+        .stats-button {
+            background: var(--primary);
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-left: 10px;
+        }
+
+        .stats-button:hover {
+            background: #1d4ed8;
+            transform: scale(1.05);
         }
 
         /* Custom Marker Styles */
@@ -109,13 +282,13 @@
 
         /* Modern Popup */
         .leaflet-popup-content-wrapper {
-            background: rgba(255, 255, 255, 0.95);
+            background: rgba(15, 23, 42, 0.95);
             backdrop-filter: blur(12px);
             border-radius: 16px;
-            box-shadow: 0 12px 32px rgba(0,0,0,0.15);
+            box-shadow: 0 12px 32px rgba(0,0,0,0.22);
             padding: 0;
             overflow: hidden;
-            border: 1px solid rgba(255,255,255,0.8);
+            border: 1px solid rgba(255,255,255,0.14);
         }
 
         .leaflet-popup-tip-container {
@@ -126,6 +299,7 @@
             margin: 0;
             line-height: 1.5;
             min-width: 240px;
+            color: #f8fafc;
         }
 
         .popup-header {
@@ -239,28 +413,20 @@
             z-index: 1000;
             width: 300px;
             max-width: calc(100vw - 48px);
-            background: var(--surface);
+            background: rgba(10, 18, 34, 0.95);
             backdrop-filter: var(--surface-blur);
             -webkit-backdrop-filter: var(--surface-blur);
-            border: 1px solid rgba(255,255,255,0.7);
+            border: 1px solid rgba(255,255,255,0.12);
             border-radius: 20px;
-            box-shadow: 0 12px 32px rgba(0,0,0,0.12);
+            box-shadow: 0 14px 40px rgba(0,0,0,0.22);
             padding: 20px;
-            color: var(--text-main);
-            font-size: 0.95rem;
-        }
-
-        .legend-panel h2 {
-            margin: 0 0 12px;
-            font-size: 1rem;
-            font-weight: 700;
-            color: var(--text-main);
+            color: #f8fafc;
             letter-spacing: 0.5px;
         }
 
         .legend-panel p {
             margin: 0 0 14px;
-            color: var(--text-light);
+            color: rgba(248,248,252,0.72);
             line-height: 1.45;
             font-size: 0.9rem;
         }
@@ -271,7 +437,7 @@
             gap: 10px;
             margin-bottom: 12px;
             cursor: pointer;
-            color: var(--text-main);
+            color: #f8fafc;
             font-weight: 500;
         }
 
@@ -283,11 +449,11 @@
 
         .legend-panel select {
             width: 100%;
-            border: 1px solid rgba(148,163,184,0.35);
+            border: 1px solid rgba(255,255,255,0.12);
             border-radius: 12px;
             padding: 10px 12px;
-            background: white;
-            color: var(--text-main);
+            background: rgba(255,255,255,0.05);
+            color: #f8fafc;
             font-family: 'Inter', sans-serif;
             font-weight: 500;
             margin-bottom: 16px;
@@ -366,23 +532,533 @@
 
         .leaflet-control-zoom a:first-child { border-bottom: 1px solid rgba(0,0,0,0.05) !important; }
 
+        /* Search & Filter Panel */
+        .search-panel {
+            position: absolute;
+            top: 100px;
+            left: 24px;
+            z-index: 1050;
+            background: rgba(8, 14, 28, 0.96);
+            backdrop-filter: var(--surface-blur);
+            border: 1px solid rgba(255,255,255,0.12);
+            border-radius: 20px;
+            box-shadow: 0 16px 40px rgba(0, 0, 0, 0.24);
+            padding: 22px;
+            width: 320px;
+            max-width: calc(100vw - 48px);
+            max-height: 70vh;
+            overflow-y: auto;
+            display: none;
+            color: #f8fafc;
+        }
+
+        .route-panel {
+            position: absolute;
+            top: 100px;
+            left: 24px;
+            z-index: 1050;
+            background: rgba(255,255,255,0.96);
+            backdrop-filter: blur(18px);
+            border: 1px solid rgba(15, 23, 42, 0.12);
+            border-radius: 28px;
+            box-shadow: 0 18px 48px rgba(0, 0, 0, 0.16);
+            padding: 24px;
+            width: 320px;
+            max-width: calc(100vw - 48px);
+            color: #0f172a;
+            display: none;
+        }
+
+        .route-panel.active {
+            display: block;
+        }
+
+        .route-panel h3 {
+            margin: 0 0 16px 0;
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #0f172a;
+        }
+
+        .route-panel .route-group {
+            margin-bottom: 18px;
+        }
+
+        .route-panel label {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: #334155;
+        }
+
+        .route-panel input {
+            width: 100%;
+            padding: 12px 14px;
+            border-radius: 14px;
+            border: 1px solid rgba(15, 23, 42, 0.14);
+            background: #f8fafc;
+            color: #0f172a;
+            font-size: 0.95rem;
+        }
+
+        .route-panel .route-actions {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .route-panel button,
+        .route-panel .route-action-button {
+            width: 100%;
+            padding: 12px 14px;
+            border-radius: 14px;
+            border: none;
+            cursor: pointer;
+            font-weight: 700;
+            font-size: 0.95rem;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .route-panel .route-action-button {
+            background: #e2e8f0;
+            color: #0f172a;
+        }
+
+        .route-panel .route-action-button.primary {
+            background: var(--primary);
+            color: #ffffff;
+        }
+
+        .route-panel .route-action-button:hover,
+        .route-panel button:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 8px 18px rgba(15, 23, 42, 0.12);
+        }
+
+        .route-panel .route-summary {
+            margin-top: 14px;
+            padding: 14px 16px;
+            border-radius: 16px;
+            background: #eff6ff;
+            color: #0f172a;
+            font-size: 0.92rem;
+            line-height: 1.5;
+        }
+
+        .route-panel .route-summary strong {
+            display: block;
+            margin-bottom: 8px;
+            color: #1d4ed8;
+        }
+
+        .route-panel .route-hint {
+            margin-top: 10px;
+            color: #475569;
+            font-size: 0.85rem;
+        }
+
+        .search-input-wrapper input {
+            width: 100%;
+            padding: 12px 16px;
+            border: 1px solid rgba(255,255,255,0.16);
+            border-radius: 12px;
+            background: rgba(255,255,255,0.08);
+            color: #f8fafc;
+            font-size: 0.95rem;
+            font-family: 'Inter', sans-serif;
+            transition: all 0.3s ease;
+        }
+
+        .search-input-wrapper input:focus {
+            outline: none;
+            border-color: var(--primary);
+            background: rgba(255,255,255,0.12);
+        }
+
+        .search-input-wrapper input::placeholder {
+            color: var(--text-light);
+        }
+
+        .search-results {
+            max-height: 300px;
+            overflow-y: auto;
+        }
+
+        .search-result-item {
+            padding: 12px;
+            margin-bottom: 8px;
+            background: rgba(96, 165, 250, 0.18);
+            border-radius: 12px;
+            cursor: pointer;
+            border-left: 4px solid var(--primary);
+            transition: all 0.2s ease;
+            font-size: 0.9rem;
+            color: #0f172a;
+        }
+
+        .search-result-item:hover {
+            background: rgba(96, 165, 250, 0.26);
+            transform: translateX(4px);
+        }
+
+        .filter-section {
+            margin-bottom: 20px;
+            padding-bottom: 16px;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .filter-section:last-child {
+            border-bottom: none;
+        }
+
+        .filter-title {
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: var(--text-light);
+            letter-spacing: 0.5px;
+            margin-bottom: 12px;
+        }
+
+        .filter-option {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+            cursor: pointer;
+        }
+
+        .filter-option input[type="checkbox"] {
+            width: 18px;
+            height: 18px;
+            accent-color: var(--primary);
+            cursor: pointer;
+            margin-right: 10px;
+        }
+
+        .filter-option label {
+            cursor: pointer;
+            flex-grow: 1;
+            font-size: 0.95rem;
+        }
+
+        .bookmark-btn {
+            background: var(--primary);
+            color: white;
+            border: none;
+            padding: 10px 16px;
+            border-radius: 12px;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 12px;
+            width: 100%;
+            font-weight: 600;
+        }
+
+        .bookmark-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(0, 102, 255, 0.3);
+        }
+
+        .bookmark-btn.active {
+            background: var(--success);
+        }
+
+        /* Bookmarks Panel */
+        .bookmarks-panel {
+            position: absolute;
+            top: 100px;
+            right: 24px;
+            z-index: 1050;
+            background: rgba(8, 14, 28, 0.96);
+            backdrop-filter: var(--surface-blur);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: 20px;
+            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.24);
+            padding: 20px;
+            width: 300px;
+            max-width: calc(100vw - 48px);
+            max-height: 60vh;
+            overflow-y: auto;
+            display: none;
+            color: #f8fafc;
+        }
+
+        .bookmarks-panel.show {
+            display: block;
+        }
+
+        .bookmark-item {
+            padding: 12px;
+            background: rgba(248, 248, 252, 0.06);
+            border-radius: 10px;
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-left: 4px solid var(--success);
+        }
+
+        .bookmark-item-info {
+            flex-grow: 1;
+            cursor: pointer;
+        }
+
+        .bookmark-item-name {
+            font-weight: 600;
+            font-size: 0.9rem;
+            color: #f8fafc;
+            margin-bottom: 4px;
+        }
+
+        .bookmark-item-type {
+            font-size: 0.8rem;
+            color: rgba(248, 248, 252, 0.72);
+        }
+
+        .bookmark-remove {
+            background: var(--danger);
+            color: white;
+            border: none;
+            width: 28px;
+            height: 28px;
+            border-radius: 6px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s ease;
+        }
+
+        .bookmark-remove:hover {
+            background: #dc2626;
+        }
+
+        /* Routing */
+        .leaflet-routing-container {
+            background: var(--surface) !important;
+            border-radius: 12px !important;
+            border: 1px solid rgba(255, 255, 255, 0.7) !important;
+        }
+
+        .routing-toggle {
+            position: absolute;
+            bottom: 100px;
+            right: 24px;
+            z-index: 1050;
+            background: var(--primary);
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 50px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 6px 16px rgba(0, 102, 255, 0.3);
+        }
+
+        .routing-toggle:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0, 102, 255, 0.4);
+        }
+
+        .routing-toggle.active {
+            background: var(--success);
+        }
+
+        /* Mobile Responsivitas */
+        @media (max-width: 768px) {
+            .landing-page {
+                overflow-y: auto;
+            }
+
+            .landing-title {
+                font-size: 2rem;
+            }
+
+            .landing-subtitle {
+                font-size: 1rem;
+            }
+
+            .landing-content {
+                padding: 40px 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .landing-title {
+                font-size: 1.5rem;
+            }
+
+            .landing-subtitle {
+                font-size: 0.9rem;
+            }
+
+            .landing-icon {
+                font-size: 3rem;
+            }
+
+            .feature-card {
+                padding: 15px;
+            }
+
+            .feature-title {
+                font-size: 1rem;
+            }
+
+            .feature-description {
+                font-size: 0.8rem;
+            }
+
+            .landing-button {
+                padding: 10px 20px;
+                font-size: 0.9rem;
+            }
+
+            .search-panel,
+            .bookmarks-panel {
+                max-height: 40vh;
+            }
+
+            .popup-header {
+                padding: 12px 16px;
+                font-size: 0.95rem;
+            }
+
+            .popup-body {
+                padding: 16px;
+            }
+        }
     </style>
+
 </head>
 <body>
+
+    <div class="landing-page" id="landingPage">
+        <div class="landing-content">
+                <div class="nav-top">
+                    <div class="logo">WebGIS Dsgn</div>
+                    <div class="nav-actions">
+                        <button id="signinBtn">Sign In</button>
+                    </div>
+                </div>
+
+                <div class="hero">
+                    <div class="hero-left">
+                        <h1 class="landing-title">Welcome to WebGIS Pekanbaru</h1>
+                        <p class="landing-subtitle">Jelajahi fasilitas publik Pekanbaru dengan peta interaktif, filter, dan informasi lengkap tiap lokasi.</p>
+
+                        <div class="search-hero">
+                            <input id="heroSearch" placeholder="Cari fasilitas: contoh 'RSUD' atau 'SMA'" />
+                            <button id="heroSearchBtn">Cari</button>
+                        </div>
+
+                        <div class="hero-cta">
+                            <button class="landing-button" id="enterButton"><i class="fa-solid fa-rocket"></i> Masuk ke Peta</button>
+                            <button class="landing-button secondary" id="learnMoreBtn"><i class="fa-solid fa-book-open"></i> Pelajari Lebih Lanjut</button>
+                        </div>
+                    </div>
+
+                    <div class="hero-right">
+                        <div class="landing-features">
+                            <div class="feature-card" role="button" tabindex="0">
+                                <div class="feature-icon"><i class="fa-solid fa-hospital"></i></div>
+                                <div class="feature-title">Rumah Sakit</div>
+                                <div class="feature-description">Temukan rumah sakit terdekat dengan informasi lengkap</div>
+                            </div>
+                            <div class="feature-card" role="button" tabindex="0">
+                                <div class="feature-icon"><i class="fa-solid fa-school"></i></div>
+                                <div class="feature-title">SMA</div>
+                                <div class="feature-description">Lokasi SMA yang tersedia di Kota Pekanbaru</div>
+                            </div>
+                            <div class="feature-card" role="button" tabindex="0">
+                                <div class="feature-icon"><i class="fa-solid fa-fire-extinguisher"></i></div>
+                                <div class="feature-title">Pemadam Kebakaran</div>
+                                <div class="feature-description">Kantor pemadam kebakaran untuk keselamatan</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+
+        <div class="landing-footer">
+            <p>WebGIS Pekanbaru &copy; 2026 | Sistem Informasi Geografis untuk Fasilitas Publik</p>
+        </div>
+    </div>
+
+    <div class="modal" id="statsModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title">Statistik Fasilitas</h2>
+                <button class="modal-close" id="closeModal">&times;</button>
+            </div>
+            <div id="statsContent">
+                <!-- Stats will be populated by JS -->
+            </div>
+        </div>
+    </div>
 
     <div class="map-title">
         <i class="fa-solid fa-map-location-dot"></i>
         <h1>WebGIS Fasilitas Umum Pekanbaru</h1>
+        <button class="stats-button" id="statsButton">Lihat Statistik</button>
     </div>
 
     <div id="map"></div>
+
+    <!-- Search Panel -->
+    <div class="search-panel" id="searchPanel" style="display:none;">
+        <div class="search-input-wrapper">
+            <input type="text" id="searchInput" placeholder="Cari fasilitas..." autocomplete="off">
+        </div>
+        <div id="searchResults" class="search-results"></div>
+    </div>
+
+    <!-- Bookmarks Panel -->
+    <div class="bookmarks-panel" id="bookmarksPanel">
+        <h3 style="margin: 0 0 16px 0; font-size: 1rem;"><i class="fa-solid fa-star"></i> Favorit</h3>
+        <div id="bookmarksList"></div>
+    </div>
+
+    <!-- Routing Toggle -->
+    <button class="routing-toggle" id="routingToggle" title="Tampilkan rute ke fasilitas"><i class="fa-solid fa-route"></i> Rute</button>
+
+    <!-- Route Planning Panel -->
+    <div class="route-panel" id="routePanel">
+        <h3>Perencanaan Rute</h3>
+        <div class="route-group">
+            <label for="routeOriginInput">Titik Awal</label>
+            <input type="text" id="routeOriginInput" placeholder="Ketik nama lokasi atau pilih GPS" readonly>
+            <div class="route-actions">
+                <button class="route-action-button" id="useGpsBtn">Gunakan GPS</button>
+                <button class="route-action-button" id="pickOriginBtn">Klik Peta</button>
+            </div>
+        </div>
+        <div class="route-group">
+            <label for="routeDestInput">Titik Tujuan</label>
+            <input type="text" id="routeDestInput" placeholder="Ketik nama lokasi tujuan..." readonly>
+            <button class="route-action-button" id="pickDestBtn">Klik Peta untuk Memilih Tujuan</button>
+        </div>
+        <button class="route-action-button primary" id="routeButton" disabled>Hitung Rute</button>
+        <div class="route-summary" id="routeSummary" style="display:none;"></div>
+        <div class="route-hint">Routing menggunakan OSRM — estimasi rute kendaraan.</div>
+    </div>
+
+    <!-- Toggle Buttons -->
+    <div style="position: absolute; top: 100px; right: 24px; z-index: 1050; display: flex; gap: 10px;">
+        <button id="toggleSearch" style="background: var(--primary); color: white; border: none; padding: 12px 16px; border-radius: 12px; cursor: pointer; font-weight: 600; transition: all 0.3s ease;" title="Buka pencarian"><i class="fa-solid fa-magnifying-glass"></i> Cari</button>
+        <button id="toggleBookmarks" style="background: var(--success); color: white; border: none; padding: 12px 16px; border-radius: 12px; cursor: pointer; font-weight: 600; transition: all 0.3s ease;" title="Lihat favorit"><i class="fa-solid fa-star"></i> Favorit</button>
+    </div>
+
 
     <div class="legend-panel" id="legendPanel">
         <h2>Legenda & Filter</h2>
         <p>Pilih jenis fasilitas yang ingin ditampilkan, lalu urutkan tampilan legenda.</p>
 
         <label><input type="checkbox" id="check-hospital" checked> Rumah Sakit</label>
-        <label><input type="checkbox" id="check-school" checked> Sekolah</label>
+        <label><input type="checkbox" id="check-school" checked> SMA</label>
         <label><input type="checkbox" id="check-fire" checked> Pemadam Kebakaran</label>
 
         <select id="sortSelect" aria-label="Urutkan legenda">
@@ -398,172 +1074,311 @@
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
     
     <script>
-        // Inisialisasi Peta (Center di Pekanbaru)
-        const map = L.map('map', {
-            zoomControl: false // Kita pindahkan zoom control ke kanan bawah
-        }).setView([0.5333, 101.4500], 13);
+        let map = null; // Declare map globally
 
-        // Pindahkan zoom control ke kanan bawah
-        L.control.zoom({ position: 'bottomright' }).addTo(map);
-
-        // Tambahkan Basemap OpenStreetMap
-        const osm = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            maxZoom: 19,
-            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-        }).addTo(map);
-
-        // Icon Custom Generator
-        const createCustomIcon = (type, iconClass) => {
-            return L.divIcon({
-                className: 'custom-marker',
-                html: `<div class="marker-icon-container marker-${type}"><i class="${iconClass}"></i></div>`,
-                iconSize: [36, 36],
-                iconAnchor: [18, 18], // Center of the marker
-                popupAnchor: [0, -20] // Popup appears above the marker
-            });
-        };
-
-        const icons = {
-            hospital: createCustomIcon('hospital', 'fa-solid fa-hospital'),
-            school: createCustomIcon('school', 'fa-solid fa-graduation-cap'),
-            fire: createCustomIcon('fire', 'fa-solid fa-fire-extinguisher')
-        };
-
-        // Fungsi untuk membuat popup modern
-        const createPopupContent = (feature, type, title, typeClass) => {
-            let props = feature.properties;
-            let rows = '';
-            
-            for (let key in props) {
-                if(key !== 'name' && key !== 'type') {
-                    // Format key: uppercase first letter, replace underscore with space
-                    let formattedKey = key.replace(/_/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
-                    rows += `
-                        <div class="popup-row">
-                            <div class="popup-label">${formattedKey}</div>
-                            <div class="popup-value">${props[key]}</div>
-                        </div>
-                    `;
-                }
-            }
-
-            return `
-                <div class="popup-header ${typeClass}">
-                    <i class="${type === 'hospital' ? 'fa-solid fa-hospital' : (type === 'school' ? 'fa-solid fa-graduation-cap' : 'fa-solid fa-fire-extinguisher')}"></i>
-                    <span>${props.name || title}</span>
-                </div>
-                <div class="popup-body">
-                    ${rows}
-                </div>
-            `;
-        };
-
-        // Layer Groups
-        const hospitalLayer = L.layerGroup().addTo(map);
-        const schoolLayer = L.layerGroup().addTo(map);
-        const fireLayer = L.layerGroup().addTo(map);
-
-        // Fungsi untuk me-load GeoJSON
-        const loadGeoJSON = async (url, layerGroup, icon, type, title, typeClass) => {
-            try {
-                const response = await fetch(url);
-                if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
-                const data = await response.json();
-                
-                L.geoJSON(data, {
-                    pointToLayer: (feature, latlng) => {
-                        return L.marker(latlng, { icon: icon });
-                    },
-                    onEachFeature: (feature, layer) => {
-                        if (feature.properties) {
-                            layer.bindPopup(createPopupContent(feature, type, title, typeClass), {
-                                offset: [0, -10],
-                                autoPanPadding: [50, 50]
-                            });
-                        }
+        // Wait for DOM to be fully loaded
+        document.addEventListener('DOMContentLoaded', () => {
+            // Landing Page - Enter button
+            const enterButton = document.getElementById('enterButton');
+            if (enterButton) {
+                enterButton.addEventListener('click', () => {
+                    document.getElementById('landingPage').style.display = 'none';
+                    document.querySelector('.map-title').classList.add('active');
+                    document.getElementById('legendPanel').classList.add('active');
+                    
+                    // Initialize map only when needed
+                    if (typeof map === 'undefined' || map === null) {
+                        initializeMap();
+                    } else {
+                        map.invalidateSize();
                     }
-                }).addTo(layerGroup);
-            } catch (error) {
-                console.warn(`Gagal memuat ${url}. Pastikan Anda menjalankan ini lewat local server (Live Server, dll) agar fetch() bisa bekerja:`, error);
+                });
             }
-        };
 
-        // Load Data dari folder 'data'
-        loadGeoJSON('data/hospital.geojson', hospitalLayer, icons.hospital, 'hospital', 'Rumah Sakit', 'hospital');
-        loadGeoJSON('data/school.geojson', schoolLayer, icons.school, 'school', 'Sekolah', 'school');
-        loadGeoJSON('data/fire_station.geojson', fireLayer, icons.fire, 'fire', 'Pemadam Kebakaran', 'fire');
-
-        const legendItems = [
-            {
-                key: 'hospital',
-                label: 'Rumah Sakit',
-                icon: 'fa-solid fa-hospital',
-                className: 'marker-hospital',
-                layer: hospitalLayer,
-                checked: true
-            },
-            {
-                key: 'school',
-                label: 'Sekolah',
-                icon: 'fa-solid fa-graduation-cap',
-                className: 'marker-school',
-                layer: schoolLayer,
-                checked: true
-            },
-            {
-                key: 'fire',
-                label: 'Pemadam Kebakaran',
-                icon: 'fa-solid fa-fire-extinguisher',
-                className: 'marker-fire',
-                layer: fireLayer,
-                checked: true
-            }
-        ];
-
-        const legendItemList = document.getElementById('legendItemList');
-        const sortSelect = document.getElementById('sortSelect');
-
-        const renderLegendItems = (items) => {
-            legendItemList.innerHTML = items.map(item => `
-                <div class="legend-item">
-                    <div class="legend-color ${item.className}"><i class="${item.icon}"></i></div>
-                    <span>${item.label}</span>
-                </div>
-            `).join('');
-        };
-
-        const updateLegend = () => {
-            let activeItems = legendItems.map(item => {
-                const checkbox = document.getElementById(`check-${item.key}`);
-                item.checked = checkbox.checked;
-                return item;
+        // Landing Page - Learn More button
+        const learnMoreBtn = document.getElementById('learnMoreBtn');
+        if (learnMoreBtn) {
+            learnMoreBtn.addEventListener('click', () => {
+                alert('WebGIS Pekanbaru\n\nFitur Utama:\n- Visualisasi peta interaktif\n- Filter fasilitas publik\n- Informasi lengkap setiap lokasi\n- Statistik real-time\n\nData yang Tersedia:\n- 3 Rumah Sakit\n- 2 Kantor Pemadam Kebakaran\n- SMA di Kota Pekanbaru\n\nGunakan "Masuk ke Peta" untuk memulai!');
             });
+        }
 
-            activeItems.forEach(item => {
-                if (item.checked) {
-                    if (!map.hasLayer(item.layer)) map.addLayer(item.layer);
-                } else {
-                    if (map.hasLayer(item.layer)) map.removeLayer(item.layer);
+        // Make feature cards clickable as well
+        document.querySelectorAll('.feature-card').forEach(card => {
+            card.addEventListener('click', () => {
+                enterButton?.click();
+            });
+            card.addEventListener('keypress', event => {
+                if (event.key === 'Enter' || event.key === ' ') {
+                    event.preventDefault();
+                    enterButton?.click();
                 }
             });
+        });
+        });
 
-            const sortValue = sortSelect.value;
-            if (sortValue === 'name-asc') {
-                activeItems.sort((a, b) => a.label.localeCompare(b.label, 'id'));
-            } else if (sortValue === 'name-desc') {
-                activeItems.sort((a, b) => b.label.localeCompare(a.label, 'id'));
+        // Initialize Map
+        function initializeMap() {
+            // Inisialisasi Peta (Center di Pekanbaru)
+            map = L.map('map', {
+                zoomControl: false // Kita pindahkan zoom control ke kanan bawah
+            }).setView([0.5333, 101.4500], 13);
+
+            // Pindahkan zoom control ke kanan bawah
+            L.control.zoom({ position: 'bottomright' }).addTo(map);
+
+            // Tambahkan Basemap terang berwarna dari OpenStreetMap
+            const osm = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                maxZoom: 19,
+                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+            }).addTo(map);
+
+            // Icon Custom Generator
+            const createCustomIcon = (type, iconClass) => {
+                return L.divIcon({
+                    className: 'custom-marker',
+                    html: `<div class="marker-icon-container marker-${type}"><i class="${iconClass}"></i></div>`,
+                    iconSize: [36, 36],
+                    iconAnchor: [18, 18],
+                    popupAnchor: [0, -20]
+                });
+            };
+
+            const icons = {
+                hospital: createCustomIcon('hospital', 'fa-solid fa-hospital'),
+                school: createCustomIcon('school', 'fa-solid fa-graduation-cap'),
+                fire: createCustomIcon('fire', 'fa-solid fa-fire-extinguisher')
+            };
+
+            // Fungsi untuk membuat popup modern
+            const createPopupContent = (feature, type, title, typeClass) => {
+                let props = feature.properties;
+                let rows = '';
+                
+                for (let key in props) {
+                    if(key !== 'name' && key !== 'type') {
+                        let formattedKey = key.replace(/_/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
+                        rows += `
+                            <div class="popup-row">
+                                <div class="popup-label">${formattedKey}</div>
+                                <div class="popup-value">${props[key]}</div>
+                            </div>
+                        `;
+                    }
+                }
+
+                const bookmarkBtn = `
+                    <button class="bookmark-btn" onclick="addBookmark({name: '${props.name}', type: '${type}', lat: ${feature.geometry.coordinates[1]}, lng: ${feature.geometry.coordinates[0]}}); this.style.display='none'; this.nextSibling.style.display='block';">
+                        Tambah Favorit
+                    </button>
+                    <button class="bookmark-btn active" style="display:none;" onclick="this.style.display='none'; this.previousSibling.style.display='block';">
+                        ✓ Sudah Disimpan
+                    </button>
+                `;
+
+                return `
+                    <div class="popup-header ${typeClass}">
+                        <i class="${type === 'hospital' ? 'fa-solid fa-hospital' : (type === 'school' ? 'fa-solid fa-graduation-cap' : 'fa-solid fa-fire-extinguisher')}"></i>
+                        <span>${props.name || title}</span>
+                    </div>
+                    <div class="popup-body">
+                        ${rows}
+                        ${bookmarkBtn}
+                    </div>
+                `;
+            };
+
+            // Layer Groups
+            const hospitalLayer = L.layerGroup().addTo(map);
+            const schoolLayer = L.layerGroup().addTo(map);
+            const fireLayer = L.layerGroup().addTo(map);
+
+            // Fungsi untuk me-load GeoJSON
+            const loadGeoJSON = async (url, layerGroup, icon, type, title, typeClass) => {
+                try {
+                    const response = await fetch(url);
+                    if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+                    const data = await response.json();
+                    
+                    L.geoJSON(data, {
+                        pointToLayer: (feature, latlng) => {
+                            return L.marker(latlng, { icon: icon });
+                        },
+                        onEachFeature: (feature, layer) => {
+                            if (feature.properties) {
+                                const coords = feature.geometry.coordinates;
+                                layer.bindPopup(createPopupContent(feature, type, title, typeClass), {
+                                    offset: [0, -10],
+                                    autoPanPadding: [50, 50]
+                                });
+                                
+                                // Add to search facilities
+                                if (typeof addFacilityToSearch !== 'undefined') {
+                                    addFacilityToSearch(feature.properties.name, type, coords[1], coords[0], layer);
+                                }
+                            }
+                        }
+                    }).addTo(layerGroup);
+                } catch (error) {
+                    console.warn(`Gagal memuat ${url}:`, error);
+                }
+            };
+
+            // Load Data dari folder 'data'
+            loadGeoJSON('data/hospital.geojson', hospitalLayer, icons.hospital, 'hospital', 'Rumah Sakit', 'hospital');
+            loadGeoJSON('data/school.geojson', schoolLayer, icons.school, 'SMA', 'SMA', 'school');
+            loadGeoJSON('data/fire_station.geojson', fireLayer, icons.fire, 'fire', 'Pemadam Kebakaran', 'fire');
+
+            const legendItems = [
+                {
+                    key: 'hospital',
+                    label: 'Rumah Sakit',
+                    icon: 'fa-solid fa-hospital',
+                    className: 'marker-hospital',
+                    layer: hospitalLayer,
+                    checked: true
+                },
+                {
+                    key: 'school',
+                    label: 'SMA',
+                    icon: 'fa-solid fa-graduation-cap',
+                    className: 'marker-school',
+                    layer: schoolLayer,
+                    checked: true
+                },
+                {
+                    key: 'fire',
+                    label: 'Pemadam Kebakaran',
+                    icon: 'fa-solid fa-fire-extinguisher',
+                    className: 'marker-fire',
+                    layer: fireLayer,
+                    checked: true
+                }
+            ];
+
+            const legendItemList = document.getElementById('legendItemList');
+            const sortSelect = document.getElementById('sortSelect');
+
+            const renderLegendItems = (items) => {
+                legendItemList.innerHTML = items.map(item => `
+                    <div class="legend-item">
+                        <div class="legend-color ${item.className}"><i class="${item.icon}"></i></div>
+                        <span>${item.label}</span>
+                    </div>
+                `).join('');
+            };
+
+            const updateLegend = () => {
+                let activeItems = legendItems.map(item => {
+                    const checkbox = document.getElementById(`check-${item.key}`);
+                    item.checked = checkbox.checked;
+                    return item;
+                });
+
+                activeItems.forEach(item => {
+                    if (item.checked) {
+                        if (!map.hasLayer(item.layer)) map.addLayer(item.layer);
+                    } else {
+                        if (map.hasLayer(item.layer)) map.removeLayer(item.layer);
+                    }
+                });
+
+                const sortValue = sortSelect.value;
+                if (sortValue === 'name-asc') {
+                    activeItems.sort((a, b) => a.label.localeCompare(b.label, 'id'));
+                } else if (sortValue === 'name-desc') {
+                    activeItems.sort((a, b) => b.label.localeCompare(a.label, 'id'));
+                }
+
+                renderLegendItems(activeItems.filter(item => item.checked));
+            };
+
+            document.getElementById('check-hospital').addEventListener('change', updateLegend);
+            document.getElementById('check-school').addEventListener('change', updateLegend);
+            document.getElementById('check-fire').addEventListener('change', updateLegend);
+            sortSelect.addEventListener('change', updateLegend);
+
+            updateLegend();
+        }
+
+        // Modal Statistik
+        const statsModal = document.getElementById('statsModal');
+        const statsButton = document.getElementById('statsButton');
+        const closeModal = document.getElementById('closeModal');
+
+        statsButton.addEventListener('click', () => {
+            statsModal.classList.add('show');
+            loadStats();
+        });
+
+        closeModal.addEventListener('click', () => {
+            statsModal.classList.remove('show');
+        });
+
+        statsModal.addEventListener('click', (e) => {
+            if (e.target === statsModal) {
+                statsModal.classList.remove('show');
             }
+        });
 
-            renderLegendItems(activeItems.filter(item => item.checked));
-        };
+        // Load Stats
+        async function loadStats() {
+            const statsContent = document.getElementById('statsContent');
+            statsContent.innerHTML = '<p>Loading...</p>';
 
-        document.getElementById('check-hospital').addEventListener('change', updateLegend);
-        document.getElementById('check-school').addEventListener('change', updateLegend);
-        document.getElementById('check-fire').addEventListener('change', updateLegend);
-        sortSelect.addEventListener('change', updateLegend);
+            try {
+                const [hospitalData, fireData] = await Promise.all([
+                    fetch('data/hospital.geojson').then(r => r.json()),
+                    fetch('data/fire_station.geojson').then(r => r.json())
+                ]);
 
-        updateLegend();
+                const hospitalCount = hospitalData.features.length;
+                const fireCount = fireData.features.length;
+
+                let totalBeds = 0;
+                hospitalData.features.forEach(f => {
+                    const kapasitas = f.properties.kapasitas;
+                    if (kapasitas) {
+                        const match = kapasitas.match(/(\d+)/);
+                        if (match) totalBeds += parseInt(match[1]);
+                    }
+                });
+
+                let totalArmada = 0;
+                fireData.features.forEach(f => {
+                    const armada = f.properties.jumlah_armada;
+                    if (armada) {
+                        const match = armada.match(/(\d+)/);
+                        if (match) totalArmada += parseInt(match[1]);
+                    }
+                });
+
+                statsContent.innerHTML = `
+                    <div class="stat-item">
+                        <span class="stat-label">Jumlah Rumah Sakit</span>
+                        <span class="stat-value">${hospitalCount}</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Total Kapasitas Bed</span>
+                        <span class="stat-value">${totalBeds}</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Jumlah Kantor Pemadam Kebakaran</span>
+                        <span class="stat-value">${fireCount}</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Total Armada Mobil</span>
+                        <span class="stat-value">${totalArmada}</span>
+                    </div>
+                `;
+            } catch (error) {
+                statsContent.innerHTML = '<p>Error loading statistics</p>';
+                console.error(error);
+            }
+        }
 
     </script>
+    <script src="features.js"></script>
 </body>
 </html>
+
